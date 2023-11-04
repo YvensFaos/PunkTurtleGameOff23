@@ -5,7 +5,7 @@ namespace Utils
 {
     public static class AnimateTweenHelper
     {
-        public static void Animate(ref RectTransform rectTransform, ref Tweener originalTween,float time, float shakeScaleStrength)
+        public static void Animate(ref RectTransform rectTransform, ref Tweener originalTween, float time, float shakeScaleStrength)
         {
             var rectCopy = rectTransform;
             if (originalTween != null)

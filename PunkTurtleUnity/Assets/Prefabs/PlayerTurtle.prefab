@@ -674,10 +674,94 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInput: {fileID: 5810485626202245196}
   playerRigidBody2D: {fileID: 8171280938254918886}
+  playerAnimator: {fileID: 8002606294761982875}
   defaultSpeed: 5
-  scaleFactor: 0.125
+  scaleFactor: 2
   score: 0
   distance: 0
+  scaleCurve:
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.25
+        inSlope: 1.5
+        outSlope: 1.5
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.5
+        value: 1
+        inSlope: 3.5176768
+        outSlope: 3.5176768
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.06739807
+      - serializedVersion: 3
+        time: 1
+        value: 2
+        inSlope: 2
+        outSlope: 2
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    curvePoints:
+    - one: 0
+      two: 0.25
+    - one: 0.5
+      two: 1
+    - one: 1
+      two: 2
+  speedCurve:
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 2
+        inSlope: -2
+        outSlope: -2
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.5
+        value: 1
+        inSlope: -3.483647
+        outSlope: -3.483647
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.05799377
+      - serializedVersion: 3
+        time: 1
+        value: 0.25
+        inSlope: -1.5
+        outSlope: -1.5
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    curvePoints:
+    - one: 0
+      two: 2
+    - one: 0.5
+      two: 1
+    - one: 1
+      two: 0.25
+  linearScale: 0
 --- !u!1 &7398324267831621789
 GameObject:
   m_ObjectHideFlags: 0
