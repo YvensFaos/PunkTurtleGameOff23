@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.Events;
-using Utils;
 
 public class Collider2DCallEvent : MonoBehaviour
 {
@@ -9,13 +8,11 @@ public class Collider2DCallEvent : MonoBehaviour
 
    private void OnCollisionEnter2D(Collision2D other)
    {
-      DebugUtils.DebugLogMsg($"Other {other.gameObject.name}");
       Solve(other.gameObject);   
    }
 
    private void OnTriggerEnter2D(Collider2D other)
    {
-      DebugUtils.DebugLogMsg($"Other {other.gameObject.name}");
       Solve(other.gameObject);
    }
 
