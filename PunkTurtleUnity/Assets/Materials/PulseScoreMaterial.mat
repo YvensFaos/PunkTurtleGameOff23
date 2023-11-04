@@ -44,7 +44,7 @@ Material:
     - _Min: 0.4
     - _PulseTimer: 2
     m_Colors:
-    - _PulseColor: {r: 2.1435468, g: 2.1435468, b: 2.1435468, a: 1}
+    - _PulseColor: {r: 4, g: 4, b: 4, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &1006684201638129376
 MonoBehaviour:
