@@ -1,0 +1,1231 @@
+fileFormatVersion: 2
+guid: 8c2a6efb5228d4541a7934e4d9874e73
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 2750
+        width: 211
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11e6b3505ee1448168978e311ef4dd18
+      internalID: 630658471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_1
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 2760
+        width: 247
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03872fe2a7ff043a5b8601f9243d1a0c
+      internalID: 1967613449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_2
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 2600
+        width: 265
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e760782d0468e42eaa3c769d4e3a3d3a
+      internalID: -2076937072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_3
+      rect:
+        serializedVersion: 2
+        x: 1253
+        y: 2478
+        width: 188
+        height: 493
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74501ccb6f27940779cd1a6a572e6322
+      internalID: 1297543411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_4
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 2379
+        width: 195
+        height: 586
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5260e722c126447b4a917e59c41d135d
+      internalID: 558289301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_5
+      rect:
+        serializedVersion: 2
+        x: 1773
+        y: 2202
+        width: 653
+        height: 803
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47a32514640a14bf0963a2fb12bb91d9
+      internalID: 2038936195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_6
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 2161
+        width: 597
+        height: 388
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08be78b019be245c48737223c5b7c0c7
+      internalID: 2070757593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_7
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 2080
+        width: 302
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afa75b50fdd8044c2833bb0d6b54127f
+      internalID: 721462329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_8
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 2172
+        width: 112
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57751d3c2653b4c6c9dbf3ddf56f0dff
+      internalID: -1354328784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_9
+      rect:
+        serializedVersion: 2
+        x: 1441
+        y: 1952
+        width: 87
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 151c1702bdefd457585afbe40474200b
+      internalID: 1766032719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_10
+      rect:
+        serializedVersion: 2
+        x: 1863
+        y: 1928
+        width: 157
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8661976938cd47e9b63fcecf2f67c49
+      internalID: -1348775392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_11
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 1698
+        width: 576
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a25fa624a1a984904ad09603776e9227
+      internalID: 1430196539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_12
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 1758
+        width: 256
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 727a6c9d4214644389ca772daf3cb27b
+      internalID: 1939542069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_13
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 1884
+        width: 68
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70fa2c24b6d4c49eba3e652120e6e2e1
+      internalID: 28060189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_14
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 1487
+        width: 261
+        height: 653
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 387b10036333541d29c8ca52ff298152
+      internalID: 1924947708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_15
+      rect:
+        serializedVersion: 2
+        x: 1566
+        y: 1863
+        width: 178
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c165b223a3ee4445c8c35c026d331313
+      internalID: 803447420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_16
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 1801
+        width: 61
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c92ebdef897ae4797a92a0de72d8e412
+      internalID: 1543035072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_17
+      rect:
+        serializedVersion: 2
+        x: 1804
+        y: 1704
+        width: 148
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ba6638455b214ab0a79c4046801e68f
+      internalID: 765446131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_18
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 1700
+        width: 77
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d9c8b3582a3f4ce185a3e7b39af7770
+      internalID: 1092782781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_19
+      rect:
+        serializedVersion: 2
+        x: 1399
+        y: 1637
+        width: 309
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d063c2e209e6e4fa795c8345d7905581
+      internalID: 2125781687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_20
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 1507
+        width: 184
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d763e5b22d96d433bb42c4f9b599247e
+      internalID: 1033748351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_21
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 1404
+        width: 301
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95457d8bb8f3040f789e475a9fe671cf
+      internalID: 107654276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_22
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 1469
+        width: 149
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47df3d28cdcfe4001b05c07a69314ee7
+      internalID: 1281266499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_23
+      rect:
+        serializedVersion: 2
+        x: 1076
+        y: 1537
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d92d23c710364adb857e8a677851144
+      internalID: -1369628692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_24
+      rect:
+        serializedVersion: 2
+        x: 1605
+        y: 1311
+        width: 472
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4753a93a971a84a609b7c2ebede5b2f3
+      internalID: 2072343179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_25
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 946
+        width: 1164
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fba58ceda9fd342c38936669c58ce4d3
+      internalID: -366663998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_26
+      rect:
+        serializedVersion: 2
+        x: 1303
+        y: 668
+        width: 299
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8805f69c1f63d4dd18c090281b5e8e9a
+      internalID: 1062007493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_27
+      rect:
+        serializedVersion: 2
+        x: 1687
+        y: 756
+        width: 321
+        height: 465
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 422fd023a18844bc588b16f59b362c7e
+      internalID: 947320686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_28
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 763
+        width: 69
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c282f9ebbd674ac29f22b5b232ee057
+      internalID: -2111139866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_29
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 652
+        width: 297
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e68c6cfb4b6a348f7a5bbdc83fe4e94e
+      internalID: -1982973174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_30
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 166
+        width: 254
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfe5424901a0f481283a05dca890fd34
+      internalID: -244523545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_31
+      rect:
+        serializedVersion: 2
+        x: 1654
+        y: 699
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f86e25dfd34f4a8b97a4396900aa99f
+      internalID: -841516533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_32
+      rect:
+        serializedVersion: 2
+        x: 1866
+        y: 691
+        width: 38
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca8fe3e44ca254a77b5b441e2227cf09
+      internalID: 1407567937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_33
+      rect:
+        serializedVersion: 2
+        x: 1925
+        y: 680
+        width: 33
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de51fd047879f480bb37d736f7bf5890
+      internalID: -1510354858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_34
+      rect:
+        serializedVersion: 2
+        x: 1875
+        y: 582
+        width: 53
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc9b958cd8c2441fd82e3c84546ec786
+      internalID: -735419904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_35
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 577
+        width: 65
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 919cf19b4b28c455ebb70a11e510ef77
+      internalID: -542650503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_36
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 462
+        width: 296
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b68f0b02671bc451f8aad8dd84f6bab2
+      internalID: -833655030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_37
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 547
+        width: 95
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1464fc9040424110995dd89e4e92786
+      internalID: 1580948277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_38
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 36
+        width: 727
+        height: 511
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4fdb6e871761400dae36bc897bfd411
+      internalID: 1904828396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_39
+      rect:
+        serializedVersion: 2
+        x: 1564
+        y: 486
+        width: 164
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79cc7c4190f20458ea833feb3ed5d067
+      internalID: 1691959783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_40
+      rect:
+        serializedVersion: 2
+        x: 1559
+        y: 455
+        width: 142
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76769d11f02684d50bc128b21d1c57b4
+      internalID: -981041835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_41
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 340
+        width: 250
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4115f1686afb4c71a14a5615ce3dba2
+      internalID: 2077433267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_42
+      rect:
+        serializedVersion: 2
+        x: 1582
+        y: 360
+        width: 208
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b3d7fb50ca6e427da301f6149a370b8
+      internalID: -1021909074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_43
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 366
+        width: 187
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56c4847eecf3c41c996566104333a98e
+      internalID: 39702086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_44
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 212
+        width: 115
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bf5a199909e14617b9902f314bcac19
+      internalID: 786464551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_45
+      rect:
+        serializedVersion: 2
+        x: 1253
+        y: 223
+        width: 64
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9eb2494727fb4bcaa5ee5b00c7c46d6
+      internalID: -1839573861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_46
+      rect:
+        serializedVersion: 2
+        x: 1679
+        y: 257
+        width: 176
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78d55b536c629431db802a313096cdcf
+      internalID: -1033387017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_47
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 216
+        width: 64
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd0fe4e998f524a37935ff834cf178ef
+      internalID: -708686337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk_Turtle_Assets 2_48
+      rect:
+        serializedVersion: 2
+        x: 1768
+        y: 132
+        width: 232
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c60ccde9ea93490d8e657cbe7324efc
+      internalID: -1052565659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Punk_Turtle_Assets 2_0: 630658471
+      Punk_Turtle_Assets 2_1: 1967613449
+      Punk_Turtle_Assets 2_10: -1348775392
+      Punk_Turtle_Assets 2_11: 1430196539
+      Punk_Turtle_Assets 2_12: 1939542069
+      Punk_Turtle_Assets 2_13: 28060189
+      Punk_Turtle_Assets 2_14: 1924947708
+      Punk_Turtle_Assets 2_15: 803447420
+      Punk_Turtle_Assets 2_16: 1543035072
+      Punk_Turtle_Assets 2_17: 765446131
+      Punk_Turtle_Assets 2_18: 1092782781
+      Punk_Turtle_Assets 2_19: 2125781687
+      Punk_Turtle_Assets 2_2: -2076937072
+      Punk_Turtle_Assets 2_20: 1033748351
+      Punk_Turtle_Assets 2_21: 107654276
+      Punk_Turtle_Assets 2_22: 1281266499
+      Punk_Turtle_Assets 2_23: -1369628692
+      Punk_Turtle_Assets 2_24: 2072343179
+      Punk_Turtle_Assets 2_25: -366663998
+      Punk_Turtle_Assets 2_26: 1062007493
+      Punk_Turtle_Assets 2_27: 947320686
+      Punk_Turtle_Assets 2_28: -2111139866
+      Punk_Turtle_Assets 2_29: -1982973174
+      Punk_Turtle_Assets 2_3: 1297543411
+      Punk_Turtle_Assets 2_30: -244523545
+      Punk_Turtle_Assets 2_31: -841516533
+      Punk_Turtle_Assets 2_32: 1407567937
+      Punk_Turtle_Assets 2_33: -1510354858
+      Punk_Turtle_Assets 2_34: -735419904
+      Punk_Turtle_Assets 2_35: -542650503
+      Punk_Turtle_Assets 2_36: -833655030
+      Punk_Turtle_Assets 2_37: 1580948277
+      Punk_Turtle_Assets 2_38: 1904828396
+      Punk_Turtle_Assets 2_39: 1691959783
+      Punk_Turtle_Assets 2_4: 558289301
+      Punk_Turtle_Assets 2_40: -981041835
+      Punk_Turtle_Assets 2_41: 2077433267
+      Punk_Turtle_Assets 2_42: -1021909074
+      Punk_Turtle_Assets 2_43: 39702086
+      Punk_Turtle_Assets 2_44: 786464551
+      Punk_Turtle_Assets 2_45: -1839573861
+      Punk_Turtle_Assets 2_46: -1033387017
+      Punk_Turtle_Assets 2_47: -708686337
+      Punk_Turtle_Assets 2_48: -1052565659
+      Punk_Turtle_Assets 2_5: 2038936195
+      Punk_Turtle_Assets 2_6: 2070757593
+      Punk_Turtle_Assets 2_7: 721462329
+      Punk_Turtle_Assets 2_8: -1354328784
+      Punk_Turtle_Assets 2_9: 1766032719
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
