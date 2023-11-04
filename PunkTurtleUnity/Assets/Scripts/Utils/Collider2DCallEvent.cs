@@ -1,22 +1,13 @@
 using UnityEngine;
 using UnityEngine.Events;
+using Utils;
 
-public class Collider2DCallEvent : MonoBehaviour
+public class Collider2DCallEvent : AgnosticCollisionSolver2D
 {
    [SerializeField] 
    private UnityEvent<GameObject> callEvent;
 
-   private void OnCollisionEnter2D(Collision2D other)
-   {
-      Solve(other.gameObject);   
-   }
-
-   private void OnTriggerEnter2D(Collider2D other)
-   {
-      Solve(other.gameObject);
-   }
-
-   private void Solve(GameObject gameObject)
+   protected override void Solve(GameObject gameObject)
    {
       callEvent?.Invoke(gameObject);
    }

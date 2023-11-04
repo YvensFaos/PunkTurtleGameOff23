@@ -146,7 +146,7 @@ namespace Core
         }
         
         #region Unity Actions Related
-        private void UpdateScore(int incrementScore)
+        public void UpdateScore(int incrementScore)
         {
             score += incrementScore;
             ScoreUpdateEvent?.Invoke(score);
