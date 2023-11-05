@@ -9,13 +9,15 @@ public class SpawnAreaControl : MonoBehaviour
    [SerializeField]
    private BoxCollider2D spawnArea;
    [SerializeField]
-   private List<GameObject> spawnables;
+   private List<SpriteRenderer> spawnables;
    [SerializeField]
    private int minSpawns;
    [SerializeField]
    private int maxSpawns;
+   [SerializeField]
+   private bool mirror;
 
-   private List<GameObject> spawnedObjects;
+   private List<SpriteRenderer> spawnedObjects;
    
    private void OnEnable()
    {
@@ -31,14 +33,19 @@ public class SpawnAreaControl : MonoBehaviour
    {
       DespawnRemainders();
       
-      spawnedObjects = new List<GameObject>();
+      spawnedObjects = new List<SpriteRenderer>();
       var spawnCount = Random.Range(minSpawns, maxSpawns);
       for (var i = 0; i < spawnCount; i++)
       {
-         var spawnObject = RandomHelper<GameObject>.GetRandomFromList(spawnables);
+         var spawnObject = RandomHelper<SpriteRenderer>.GetRandomFromList(spawnables);
          var position = RandomPointUtils.GetRandomPointWithBox2D(spawnArea);
          var spawnedObject = LeanPool.Spawn(spawnObject, position, Quaternion.identity, transform);
          spawnedObjects.Add(spawnedObject);
+
+         if (mirror)
+         {
+            spawnedObject.flipX = true;
+         }
       }
    }
 

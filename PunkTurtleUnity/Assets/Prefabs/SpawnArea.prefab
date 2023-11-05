@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8390777241578555937}
   - component: {fileID: 17633645383163240}
   m_Layer: 8
-  m_Name: ScoreSpawnArea
+  m_Name: SpawnArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -92,10 +92,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnArea: {fileID: 9193464405453649978}
-  spawnables:
-  - {fileID: 1406372624401151954, guid: 55fd113bfc81b40729830720ac98a525, type: 3}
+  spawnables: []
   minSpawns: 1
   maxSpawns: 10
+  mirror: 0
 --- !u!114 &17633645383163240
 MonoBehaviour:
   m_ObjectHideFlags: 0
