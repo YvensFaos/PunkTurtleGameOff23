@@ -30,6 +30,7 @@ namespace Core
         //Internal Variables
         private Vector2 move = new(0,0);
         private float speedModifier = 1;
+        private bool alive = true;
 
         private float scaleStep;
         [SerializeField, ReadOnly]
@@ -41,6 +42,7 @@ namespace Core
         private UnityAction<int> LivesUpdateEvent;
         private UnityAction<float> DistanceUpdateEvent;
         private UnityAction<float> LinearScaleEvent;
+        private UnityAction<int, float> GameOverEvent;
         
         //Cached
         private static readonly int SpeedModifier = Animator.StringToHash("SpeedModifier");
@@ -80,12 +82,14 @@ namespace Core
 
         private void Update()
         {
+            if (!alive) return;
             Scale();
         }
 
         private void FixedUpdate()
         {
-            Movement();   
+            if (!alive) return;
+            Movement();
         }
 
         private void Movement()
@@ -135,6 +139,11 @@ namespace Core
             impulseSource.GenerateImpulseWithForce(2.0f);
             UpdateLives(-1);
             playerAnimator.SetTrigger(Hit);
+
+            if (lives > 0) return;
+            //Game Over
+            alive = false;
+            GameOverEvent?.Invoke(score, distance);
         }
 
         private void UpdateLinearValue()
@@ -219,6 +228,16 @@ namespace Core
         public void UnregisterUpdateLinearValues(UnityAction<float> updateLinearValueAction)
         {
             LinearScaleEvent -= updateLinearValueAction;
+        }
+        
+        public void RegisterGameOverEvent(UnityAction<int, float> gameOverEvent)
+        {
+            GameOverEvent += gameOverEvent;
+        }
+    
+        public void UnregisterGameOverEvent(UnityAction<int, float> gameOverEvent)
+        {
+            GameOverEvent -= gameOverEvent;
         }
         #endregion
     }

@@ -12,11 +12,15 @@ namespace Core
         private TextMeshProUGUI distanceText;
         [SerializeField]
         private LivesPanelControl shellPlacer;
+        [SerializeField]
+        private GameOverPanelControl gameOverPanel;
 
         private void Awake()
         {
             AssessUtils.CheckRequirement(ref scoreText, this);
             AssessUtils.CheckRequirement(ref distanceText, this);
+            AssessUtils.CheckRequirement(ref shellPlacer, this);
+            AssessUtils.CheckRequirement(ref gameOverPanel, this);
         }
 
         private void Start()
@@ -25,6 +29,7 @@ namespace Core
             playerControl.RegisterUpdateScore(UpdateScore);
             playerControl.RegisterUpdateDistance(UpdateDistance);
             playerControl.RegisterUpdateLives(UpdateLives);
+            playerControl.RegisterGameOverEvent(GameOver);
             
             //Force an update on the amount of lives to initialize this component
             playerControl.UpdateLives(0);
@@ -37,6 +42,7 @@ namespace Core
             playerControl.UnregisterUpdateScore(UpdateScore);
             playerControl.UnregisterUpdateDistance(UpdateDistance);
             playerControl.UnregisterUpdateLives(UpdateLives);
+            playerControl.UnregisterGameOverEvent(GameOver);
         }
 
         private void UpdateScore(int score)
@@ -52,6 +58,12 @@ namespace Core
         private void UpdateLives(int lives)
         {
             shellPlacer.UpdateLives(lives);
+        }
+
+        private void GameOver(int score, float distance)
+        {
+            gameOverPanel.gameObject.SetActive(true);
+            gameOverPanel.GameOver(score, distance);   
         }
     }
 }

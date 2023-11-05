@@ -24,6 +24,9 @@ public class MixerControl : MonoBehaviour
     {
         PlayerControl.GetSingleton().RegisterUpdateLinearValues(UpdateZoom);
         CalculateCurve();
+        
+        //Resets to 1.0f
+        mixer.SetFloat("SoundtrackPitch", 1.0f);
     }
         
     private void OnDestroy()
