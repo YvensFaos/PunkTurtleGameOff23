@@ -43,7 +43,9 @@ AudioMixerController:
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
   m_UpdateMode: 0
-  m_ExposedParameters: []
+  m_ExposedParameters:
+  - guid: 0d559508c8019419e9207f207519e1ae
+    name: SoundtrackPitch
   m_AudioMixerGroupViews:
   - guids:
     - 69eb250c0bc2441f28381cf127ab5ac1
@@ -104,6 +106,8 @@ AudioMixerSnapshotController:
     d00e92f2b452b42239ae8fb1df7cd22c: -19.928473
     353013b637e524491a7d424cbfdfd588: -1.5191216
     706ffd1a0ca524ed68d789d62439097a: -1.0800337
+    adc9bf8b0d88b4fb4944e86ab842f509: 11658.892
+    e7a1b60ef717a4a65ae3853cb45aa12d: 1.01
   m_TransitionOverrides: {}
 --- !u!243 &1173749782454157216
 AudioMixerGroupController:
