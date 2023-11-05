@@ -1,3 +1,4 @@
+using Cinemachine;
 using DG.Tweening;
 using NaughtyAttributes;
 using UnityEngine;
@@ -13,14 +14,18 @@ namespace Core
         [SerializeField] private PlayerInput playerInput;
         [SerializeField] private Rigidbody2D playerRigidBody2D;
         [SerializeField] private Animator playerAnimator;
+        [SerializeField] private CinemachineImpulseSource impulseSource;
     
         [Header("Data")]
         [SerializeField] private float defaultSpeed;
         [SerializeField, Range(2, 20)] private int scaleFactor = 2;
-        [SerializeField] private int score;
-        [SerializeField] private float distance;
         [SerializeField] private CurveHelper scaleCurve;
         [SerializeField] private CurveHelper speedCurve;
+
+        [Header("Game")] 
+        [SerializeField, ReadOnly] private int lives;
+        [SerializeField] private int score;
+        [SerializeField] private float distance;
 
         //Internal Variables
         private Vector2 move = new(0,0);
@@ -33,6 +38,7 @@ namespace Core
 
         //Actions
         private UnityAction<int> ScoreUpdateEvent;
+        private UnityAction<int> LivesUpdateEvent;
         private UnityAction<float> DistanceUpdateEvent;
         private UnityAction<float> LinearScaleEvent;
         
@@ -53,17 +59,19 @@ namespace Core
             AssessUtils.CheckRequirement(ref playerInput, this);
             AssessUtils.CheckRequirement(ref playerRigidBody2D, this);
             AssessUtils.CheckRequirement(ref playerAnimator, this);
+            AssessUtils.CheckRequirement(ref impulseSource, this);
         }
 
         private void Start()
         {
-            //Steps 
             scaleStep = 1.0f / scaleFactor;
             linearScale = 0.5f;
-            
+
             score = 0;
             distance = 0.0f;
             UpdateScore(0);
+            //Initialize lives with 3
+            UpdateLives(3);
             UpdateDistance(0.0f);
             InitializeCurves();
             UpdateLinearValue();
@@ -121,6 +129,12 @@ namespace Core
             });
         }
 
+        public void GetHit()
+        {
+            impulseSource.GenerateImpulseWithForce(2.0f);
+            UpdateLives(-1);
+        }
+
         private void UpdateLinearValue()
         {
             LinearScaleEvent?.Invoke(linearScale);
@@ -146,6 +160,13 @@ namespace Core
         }
         
         #region Unity Actions Related
+
+        public void UpdateLives(int incrementLife)
+        {
+            lives += incrementLife;
+            LivesUpdateEvent?.Invoke(lives);
+        }
+        
         public void UpdateScore(int incrementScore)
         {
             score += incrementScore;
@@ -168,6 +189,16 @@ namespace Core
             ScoreUpdateEvent -= updateScoreAction;
         }
     
+        public void RegisterUpdateLives(UnityAction<int> updateLiveAction)
+        {
+            LivesUpdateEvent += updateLiveAction;
+        }
+    
+        public void UnregisterUpdateLives(UnityAction<int> updateLiveAction)
+        {
+            LivesUpdateEvent -= updateLiveAction;
+        }
+        
         public void RegisterUpdateDistance(UnityAction<float> updateDistanceAction)
         {
             DistanceUpdateEvent += updateDistanceAction;

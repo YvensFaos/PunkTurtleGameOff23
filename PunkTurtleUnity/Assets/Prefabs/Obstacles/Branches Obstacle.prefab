@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8624798311505781426}
   - component: {fileID: 1529657723419444121}
   - component: {fileID: 4604278745698975058}
+  - component: {fileID: 8611306068421123397}
   m_Layer: 10
   m_Name: Branches Obstacle
   m_TagString: Untagged
@@ -130,3 +131,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.6101928, y: 6.5299997}
   m_EdgeRadius: 0
+--- !u!114 &8611306068421123397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46965002039604522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4afdef2ab5724eeaa49ea7d3f8502021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldownTimer: 4

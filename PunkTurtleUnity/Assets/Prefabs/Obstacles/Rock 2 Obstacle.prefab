@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4617236430264257591}
   - component: {fileID: 3986727534650269146}
   - component: {fileID: 3225819881379305437}
+  - component: {fileID: -5146656745444220549}
   m_Layer: 10
   m_Name: Rock 2 Obstacle
   m_TagString: Untagged
@@ -130,3 +131,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.0202231, y: 2.71}
   m_EdgeRadius: 0
+--- !u!114 &-5146656745444220549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513929239416104785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4afdef2ab5724eeaa49ea7d3f8502021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldownTimer: 4

@@ -10,6 +10,8 @@ namespace Core
         private TextMeshProUGUI scoreText;
         [SerializeField]
         private TextMeshProUGUI distanceText;
+        [SerializeField]
+        private LivesPanelControl shellPlacer;
 
         private void Awake()
         {
@@ -19,15 +21,22 @@ namespace Core
 
         private void Start()
         {
-            PlayerControl.GetSingleton().RegisterUpdateScore(UpdateScore);
-            PlayerControl.GetSingleton().RegisterUpdateDistance(UpdateDistance);
-            UpdateScore(0);
+            var playerControl = PlayerControl.GetSingleton();
+            playerControl.RegisterUpdateScore(UpdateScore);
+            playerControl.RegisterUpdateDistance(UpdateDistance);
+            playerControl.RegisterUpdateLives(UpdateLives);
+            
+            //Force an update on the amount of lives to initialize this component
+            playerControl.UpdateLives(0);
+            playerControl.UpdateScore(0);
         }
 
         private void OnDestroy()
         {
-            PlayerControl.GetSingleton().UnregisterUpdateScore(UpdateScore);
-            PlayerControl.GetSingleton().UnregisterUpdateDistance(UpdateDistance);
+            var playerControl = PlayerControl.GetSingleton();
+            playerControl.UnregisterUpdateScore(UpdateScore);
+            playerControl.UnregisterUpdateDistance(UpdateDistance);
+            playerControl.UnregisterUpdateLives(UpdateLives);
         }
 
         private void UpdateScore(int score)
@@ -38,6 +47,11 @@ namespace Core
         private void UpdateDistance(float distance)
         {
             distanceText.text = $"Distance: {distance:n2}m";
+        }
+
+        private void UpdateLives(int lives)
+        {
+            shellPlacer.UpdateLives(lives);
         }
     }
 }

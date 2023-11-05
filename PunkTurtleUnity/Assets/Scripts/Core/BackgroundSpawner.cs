@@ -18,6 +18,9 @@ namespace Core
         [SerializeField]
         private List<BackgroundSpawner> backgroundPrefabs;
         [SerializeField] 
+        private List<SpawnAreaControl> spawners;
+        
+        [SerializeField] 
         private float killTimer;
 
         private void Awake()
@@ -28,6 +31,14 @@ namespace Core
         private void OnEnable()
         {
             SetRandomBackgroundSprite();
+        }
+
+        private void OnDisable()
+        {
+            spawners.ForEach(spawner =>
+            {
+                spawner.gameObject.SetActive(false);
+            });
         }
 
         private void Start()

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3945691129983939743}
   - component: {fileID: 1826513792754433333}
   - component: {fileID: 8021373189427649955}
+  - component: {fileID: 6666478061938577188}
   m_Layer: 10
   m_Name: Stakes Obstacle
   m_TagString: Untagged
@@ -130,3 +131,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.210237, y: 4.65}
   m_EdgeRadius: 0
+--- !u!114 &6666478061938577188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261264219589082090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4afdef2ab5724eeaa49ea7d3f8502021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldownTimer: 4

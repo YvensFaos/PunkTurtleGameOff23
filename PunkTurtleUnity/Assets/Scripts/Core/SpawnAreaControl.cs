@@ -39,7 +39,7 @@ public class SpawnAreaControl : MonoBehaviour
       {
          var spawnObject = RandomHelper<SpriteRenderer>.GetRandomFromList(spawnables);
          var position = RandomPointUtils.GetRandomPointWithBox2D(spawnArea);
-         var spawnedObject = LeanPool.Spawn(spawnObject, position, Quaternion.identity, transform);
+         var spawnedObject = LeanPool.Spawn(spawnObject, position, Quaternion.identity);
          spawnedObjects.Add(spawnedObject);
 
          if (mirror)
@@ -51,6 +51,9 @@ public class SpawnAreaControl : MonoBehaviour
 
    private void DespawnRemainders()
    {
-      spawnedObjects?.ForEach(spawn => LeanPool.Despawn(spawn));
+      spawnedObjects?.ForEach(spawn =>
+      {
+         LeanPool.Despawn(spawn);
+      });
    }
 }
