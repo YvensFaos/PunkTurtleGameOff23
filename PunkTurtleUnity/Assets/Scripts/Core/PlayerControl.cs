@@ -44,6 +44,7 @@ namespace Core
         
         //Cached
         private static readonly int SpeedModifier = Animator.StringToHash("SpeedModifier");
+        private static readonly int Hit = Animator.StringToHash("GetHit");
 
         #region Input Actions
         public void OnMove(InputValue value)
@@ -133,6 +134,7 @@ namespace Core
         {
             impulseSource.GenerateImpulseWithForce(2.0f);
             UpdateLives(-1);
+            playerAnimator.SetTrigger(Hit);
         }
 
         private void UpdateLinearValue()
