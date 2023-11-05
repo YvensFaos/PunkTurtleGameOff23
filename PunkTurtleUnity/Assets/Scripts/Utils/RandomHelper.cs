@@ -39,6 +39,14 @@ namespace Utils
                 Random.Range(bounds.min.y, bounds.max.y),
                 Random.Range(bounds.min.z, bounds.max.z));
         }
+        
+        public static Vector2 GetRandomPointWithBox2D(BoxCollider2D boxCollider2D)
+        {
+            var bounds = boxCollider2D.bounds;
+            return new Vector2(
+                Random.Range(bounds.min.x, bounds.max.x),
+                Random.Range(bounds.min.y, bounds.max.y));
+        }
 
         public static Vector3 GetRandomPointWithinCircleCollider2(CircleCollider2D circleCollider)
         {
