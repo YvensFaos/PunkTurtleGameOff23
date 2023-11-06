@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: 4545323115032672554}
   - component: {fileID: 8002606294761982875}
   m_Layer: 0
-  m_Name: Sprite
+  m_Name: Shell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -761,6 +761,9 @@ MonoBehaviour:
       two: 1
     - one: 1
       two: 0.25
+  dashForce: 400
+  dashCoolDown: 4
+  dashCoolDownImage: {fileID: 4545323115032672554}
   lives: 0
   score: 0
   distance: 0

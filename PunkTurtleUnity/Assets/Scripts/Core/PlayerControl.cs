@@ -1,3 +1,4 @@
+using System.Collections;
 using Cinemachine;
 using DG.Tweening;
 using NaughtyAttributes;
@@ -21,6 +22,9 @@ namespace Core
         [SerializeField, Range(2, 20)] private int scaleFactor = 2;
         [SerializeField] private CurveHelper scaleCurve;
         [SerializeField] private CurveHelper speedCurve;
+        [SerializeField] private float dashForce;
+        [SerializeField] private float dashCoolDown;
+        [SerializeField] private SpriteRenderer dashCoolDownImage;
 
         [Header("Game")] 
         [SerializeField, ReadOnly] private int lives;
@@ -31,6 +35,9 @@ namespace Core
         private Vector2 move = new(0,0);
         private float speedModifier = 1;
         private bool alive = true;
+        private bool dashLeft;
+        private bool dashRight;
+        private bool isDashOnCooldown;
 
         private float scaleStep;
         [SerializeField, ReadOnly]
@@ -56,12 +63,14 @@ namespace Core
 
         public void OnDashLeft(InputValue value)
         {
-            DebugUtils.DebugLogMsg("Dash L");
+            if (isDashOnCooldown) return;
+            dashLeft = true;
         }
 
         public void OnDashRight(InputValue value)
         {
-            DebugUtils.DebugLogMsg("Dash R");
+            if (isDashOnCooldown) return;
+            dashRight = true;
         }
         #endregion
 
@@ -104,12 +113,21 @@ namespace Core
 
         private void Movement()
         {
-            //Always move up
-            Vector2 movementVector = new(move.x, 1.0f);
-            var movement = movementVector.normalized * (defaultSpeed * speedModifier * Time.deltaTime);
+            var movement = Vector2.zero;
+            if (dashLeft || dashRight)
+            {
+                Vector2 movementVector = new(dashForce * (dashLeft ? -1 : 1), 1.0f); //1.0 on y for always moving up
+                movement = movementVector * Time.deltaTime;
+                StartCoroutine(DashCooldownCoroutine());
+            }
+            else
+            {
+                Vector2 movementVector = new(move.x, 1.0f); //1.0 on y for always moving up
+                movement = movementVector.normalized * (defaultSpeed * speedModifier * Time.deltaTime);
+            }
             playerRigidBody2D.MovePosition(playerRigidBody2D.position + movement);
-        
-            UpdateDistance(1.0f * speedModifier * Time.deltaTime);
+
+            UpdateDistance(1.0f * speedModifier * Time.deltaTime); //1.0 on y for always moving up
         }
 
         private void Scale()
@@ -155,6 +173,19 @@ namespace Core
             if (lives > 0) return;
             //Game Over
             GameOver();
+        }
+
+        private IEnumerator DashCooldownCoroutine()
+        {
+            dashLeft = false;
+            dashRight = false;
+            isDashOnCooldown = true;
+            dashCoolDownImage.color = Color.black;
+            var tween = dashCoolDownImage.DOColor(Color.white, dashCoolDown);
+            yield return new WaitForSeconds(dashCoolDown);
+            isDashOnCooldown = false;
+            tween.Kill();
+            dashCoolDownImage.color = Color.white;
         }
 
         private void GameOver()
