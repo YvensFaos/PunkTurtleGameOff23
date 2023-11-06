@@ -15,9 +15,18 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Left Click",
+                    "name": "DashLeft",
                     "type": "Button",
-                    "id": "f33a4171-a00b-40ef-9616-b6b20babaff1",
+                    "id": "108662f7-e6ca-4f55-bf94-2a1dba339ea5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "DashRight",
+                    "type": "Button",
+                    "id": "e60096ad-d74a-4845-b026-cf27e4be0ebd",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -26,7 +35,7 @@
             ],
             "bindings": [
                 {
-                    "name": "2D Vector",
+                    "name": "Keyboard Arrows",
                     "id": "8c4da457-5fca-412f-88d5-c05b5b7166d6",
                     "path": "2DVector",
                     "interactions": "",
@@ -81,7 +90,7 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "2D Vector",
+                    "name": "WASD",
                     "id": "5f97b1c5-c25d-4d60-8ebf-010734ccaba7",
                     "path": "2DVector",
                     "interactions": "",
@@ -136,7 +145,7 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "2D Vector",
+                    "name": "D-Pad Arrows",
                     "id": "b9b62bbd-1696-4452-9283-76f7aafb3846",
                     "path": "2DVector",
                     "interactions": "",
@@ -214,34 +223,111 @@
                 },
                 {
                     "name": "",
-                    "id": "08b5dd5b-5545-4b3f-9b61-2e24543cbd3f",
-                    "path": "<Keyboard>/enter",
-                    "interactions": "",
+                    "id": "21b0aa4b-a1d7-4a09-9f0c-0b89cb417d23",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "MultiTap",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "Left Click",
+                    "action": "DashLeft",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "224ce5d0-73a7-47eb-946a-c3673f47642b",
-                    "path": "<Gamepad>/buttonSouth",
-                    "interactions": "",
+                    "id": "0a8c1066-a4ee-40c6-b459-9cc484eb1365",
+                    "path": "<Keyboard>/a",
+                    "interactions": "MultiTap",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "DashLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "58eedf5f-384d-4d27-8867-00c360b1f838",
+                    "path": "<Gamepad>/dpad/left",
+                    "interactions": "MultiTap",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "Left Click",
+                    "action": "DashLeft",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "797a1230-86c0-4b2c-86f2-6089b17f4a6d",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
+                    "id": "d5898aea-da7e-4ee5-88e6-62fe00ac87cc",
+                    "path": "<Gamepad>/leftStick/left",
+                    "interactions": "MultiTap",
                     "processors": "",
-                    "groups": "Mouse",
-                    "action": "Left Click",
+                    "groups": "Gamepad",
+                    "action": "DashLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6c43213d-bd28-4f58-9e4f-332f60d355ad",
+                    "path": "<Gamepad>/rightStick/left",
+                    "interactions": "MultiTap",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "DashLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3508d1dd-394a-498b-8a78-8b69a50cfffc",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "MultiTap",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "DashRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "352ecaa5-4cb1-4eb5-90f4-04b7c2a47a79",
+                    "path": "<Keyboard>/d",
+                    "interactions": "MultiTap",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "DashRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b88f4c41-b234-418d-80cf-1cd99b231811",
+                    "path": "<Gamepad>/dpad/right",
+                    "interactions": "MultiTap",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "DashRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cda94a74-cd29-47e9-aee3-1d8f1569dbe5",
+                    "path": "<Gamepad>/leftStick/right",
+                    "interactions": "MultiTap",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "DashRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "438e1bfe-d09d-493f-a9ea-a7f99b184812",
+                    "path": "<Gamepad>/rightStick/right",
+                    "interactions": "MultiTap",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "DashRight",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -266,17 +352,6 @@
             "devices": [
                 {
                     "devicePath": "<Gamepad>",
-                    "isOptional": false,
-                    "isOR": false
-                }
-            ]
-        },
-        {
-            "name": "Mouse",
-            "bindingGroup": "Mouse",
-            "devices": [
-                {
-                    "devicePath": "<Mouse>",
                     "isOptional": false,
                     "isOR": false
                 }

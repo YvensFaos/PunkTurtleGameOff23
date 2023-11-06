@@ -53,6 +53,16 @@ namespace Core
         {
             move = value.Get<Vector2>();
         }
+
+        public void OnDashLeft(InputValue value)
+        {
+            DebugUtils.DebugLogMsg("Dash L");
+        }
+
+        public void OnDashRight(InputValue value)
+        {
+            DebugUtils.DebugLogMsg("Dash R");
+        }
         #endregion
 
         private void Awake()
