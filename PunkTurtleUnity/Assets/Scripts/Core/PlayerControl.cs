@@ -144,7 +144,15 @@ namespace Core
 
             if (lives > 0) return;
             //Game Over
+            GameOver();
+        }
+
+        private void GameOver()
+        {
             alive = false;
+            DOTween.To(() => playerAnimator.GetFloat(SpeedModifier),
+                value => playerAnimator.SetFloat(SpeedModifier, value),
+                0.0f, 0.5f);
             GameOverEvent?.Invoke(score, distance);
         }
 

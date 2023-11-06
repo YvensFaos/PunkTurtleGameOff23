@@ -677,6 +677,7 @@ MonoBehaviour:
   playerRigidBody2D: {fileID: 8171280938254918886}
   playerAnimator: {fileID: 8002606294761982875}
   impulseSource: {fileID: 641144730426927625}
+  headSprite: {fileID: 1832818868584261150}
   defaultSpeed: 5
   scaleFactor: 2
   scaleCurve:
@@ -764,6 +765,7 @@ MonoBehaviour:
   lives: 0
   score: 0
   distance: 0
+  deadHead: {fileID: -3086218472764315044, guid: dcb8d214afb1e42568bf62c7f8474568, type: 3}
   linearScale: 0
 --- !u!114 &641144730426927625
 MonoBehaviour:

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2700419853581636975}
   - component: {fileID: -2870459898470015087}
   - component: {fileID: 6892103507592604306}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Plant 01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +130,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
