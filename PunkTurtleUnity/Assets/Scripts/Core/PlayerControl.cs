@@ -134,8 +134,10 @@ namespace Core
             });
         }
 
-        public void GetHit()
+        public void GetHit(SizeSO hitByObjectOfSize)
         {
+            if (!hitByObjectOfSize.CanDamage(linearScale)) return;
+            
             impulseSource.GenerateImpulseWithForce(2.0f);
             UpdateLives(-1);
             playerAnimator.SetTrigger(Hit);

@@ -8,13 +8,14 @@ namespace Core
     {
         [SerializeField]
         private float cooldownTimer = 4.0f;
-        
+        [SerializeField] 
+        private SizeSO size;
         private bool cooldown;
         
         protected override void Solve(GameObject collidedWith)
         {
             if (cooldown || !collidedWith.CompareTag("Player")) return;
-            PlayerControl.GetSingleton().GetHit();
+            PlayerControl.GetSingleton().GetHit(size);
             cooldown = true;
             StartCoroutine(ObstacleCooldown());
         }
