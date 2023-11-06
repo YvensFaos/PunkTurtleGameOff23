@@ -142,9 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCurvePosition: 0
-  mixer: {fileID: 24100000, guid: 24727ee44315646cd935a89165988b87, type: 2}
-  source: {fileID: 940950127195450466}
-  pitchCurve:
+  curve:
     curve:
       serializedVersion: 2
       m_Curve:
@@ -186,3 +184,5 @@ MonoBehaviour:
     - one: 1
       two: 0.5
   timer: 0.2
+  mixer: {fileID: 24100000, guid: 24727ee44315646cd935a89165988b87, type: 2}
+  source: {fileID: 940950127195450466}

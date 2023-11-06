@@ -62,6 +62,7 @@ GameObject:
   - component: {fileID: 555140144291364219}
   - component: {fileID: 8593084992496806385}
   - component: {fileID: 7177299976122952992}
+  - component: {fileID: 7403829062085326795}
   m_Layer: 11
   m_Name: Right Border
   m_TagString: Untagged
@@ -170,6 +171,61 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selfCollider: {fileID: 555140144291364219}
   colliderColor: {r: 0.8784709, g: 0, b: 1, a: 1}
+--- !u!114 &7403829062085326795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2523787058458907089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7aa69559cb4454a0280c429f3eba99db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentCurvePosition: 0
+  curve:
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 17
+        inSlope: 4
+        outSlope: 4
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.5
+        value: 19
+        inSlope: 9
+        outSlope: 9
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 26
+        inSlope: 14
+        outSlope: 14
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    curvePoints:
+    - one: 0
+      two: 17
+    - one: 0.5
+      two: 19
+    - one: 1
+      two: 26
+  timer: 0.2
 --- !u!1 &3639823580686921719
 GameObject:
   m_ObjectHideFlags: 0
@@ -182,6 +238,7 @@ GameObject:
   - component: {fileID: 8714238797049838201}
   - component: {fileID: 3607326257205108113}
   - component: {fileID: 6113700488893760547}
+  - component: {fileID: 6726111239626550537}
   m_Layer: 11
   m_Name: Left Border
   m_TagString: Untagged
@@ -290,3 +347,58 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selfCollider: {fileID: 555140144291364219}
   colliderColor: {r: 0.8784709, g: 0, b: 1, a: 1}
+--- !u!114 &6726111239626550537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3639823580686921719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7aa69559cb4454a0280c429f3eba99db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentCurvePosition: 0
+  curve:
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -17
+        inSlope: -4
+        outSlope: -4
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.5
+        value: -19
+        inSlope: -9
+        outSlope: -9
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: -26
+        inSlope: -14
+        outSlope: -14
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    curvePoints:
+    - one: 0
+      two: -17
+    - one: 0.5
+      two: -19
+    - one: 1
+      two: -26
+  timer: 0.2
