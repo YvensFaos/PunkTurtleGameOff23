@@ -11,11 +11,10 @@ namespace Utils
     
         protected void ControlSingleton()
         {
-            if (singleton != null)
+            if (singletonObject != null || singleton != null)
             {
                 //Destroy the current singleton, so the new one takes its place
-                Destroy(singletonObject);
-                return;
+                Destroy(singletonObject.gameObject);
             }
             //Set the singleton to be this object
             singleton = GetComponent<T>();
