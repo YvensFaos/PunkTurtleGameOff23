@@ -164,7 +164,7 @@ MonoBehaviour:
       m_RotationOrder: 4
     curvePoints:
     - one: 0
-      two: 6
+      two: 9
     - one: 0.5
       two: 15
     - one: 1
