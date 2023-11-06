@@ -31,6 +31,7 @@ public class PassiveShakeAnimation : MonoBehaviour
 
     private void StartAnimation()
     {
+        scaleTween?.Kill();
         scaleTween = transform.DOShakeScale(duration, strength).SetLoops(-1);
     }
 }
