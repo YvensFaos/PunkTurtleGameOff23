@@ -60,7 +60,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 66c210e0f527848c38b7682983821304, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -81,12 +81,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 1819611978, guid: f7de803652ceb4a2aa845bf5a665938a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 96d09bdabe0ae42f98bb6a1736537359, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 8.009999, y: 20.48539}
+  m_Size: {x: 1.28, y: 1.28}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -106,9 +106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 215601958980691091}
   backgrounds:
-  - {fileID: 1819611978, guid: f7de803652ceb4a2aa845bf5a665938a, type: 3}
-  - {fileID: 797457459, guid: f7de803652ceb4a2aa845bf5a665938a, type: 3}
-  - {fileID: 720506198, guid: f7de803652ceb4a2aa845bf5a665938a, type: 3}
+  - {fileID: 21300000, guid: 07887e88545c844ec8de8470d61cdd31, type: 3}
   spawnNextPoint: {fileID: 1477848353060681522}
   backgroundPrefabs:
   - {fileID: 2399610159918396608}
@@ -897,7 +895,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 17633645383163240, guid: ec0897a6ca7dc4af8b1d4ca4a3d41583, type: 3}
       propertyPath: colliderColor.b
-      value: 0
+      value: 0.75578046
       objectReference: {fileID: 0}
     - target: {fileID: 17633645383163240, guid: ec0897a6ca7dc4af8b1d4ca4a3d41583, type: 3}
       propertyPath: colliderColor.g
@@ -905,7 +903,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 17633645383163240, guid: ec0897a6ca7dc4af8b1d4ca4a3d41583, type: 3}
       propertyPath: colliderColor.r
-      value: 1
+      value: 0.9811321
       objectReference: {fileID: 0}
     - target: {fileID: 4045276932811023427, guid: ec0897a6ca7dc4af8b1d4ca4a3d41583, type: 3}
       propertyPath: m_RootOrder
@@ -1534,7 +1532,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 17633645383163240, guid: ec0897a6ca7dc4af8b1d4ca4a3d41583, type: 3}
       propertyPath: colliderColor.b
-      value: 0
+      value: 0.75578046
       objectReference: {fileID: 0}
     - target: {fileID: 17633645383163240, guid: ec0897a6ca7dc4af8b1d4ca4a3d41583, type: 3}
       propertyPath: colliderColor.g
@@ -1542,7 +1540,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 17633645383163240, guid: ec0897a6ca7dc4af8b1d4ca4a3d41583, type: 3}
       propertyPath: colliderColor.r
-      value: 1
+      value: 0.9811321
       objectReference: {fileID: 0}
     - target: {fileID: 4045276932811023427, guid: ec0897a6ca7dc4af8b1d4ca4a3d41583, type: 3}
       propertyPath: m_RootOrder
