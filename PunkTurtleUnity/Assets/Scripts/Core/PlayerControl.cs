@@ -2,6 +2,7 @@ using System.Collections;
 using Cinemachine;
 using DG.Tweening;
 using NaughtyAttributes;
+using Spine.Unity;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -15,6 +16,7 @@ namespace Core
         [SerializeField] private PlayerInput playerInput;
         [SerializeField] private Rigidbody2D playerRigidBody2D;
         [SerializeField] private Animator playerAnimator;
+        [SerializeField] private SkeletonAnimation playerSkeletonAnimator;
         [SerializeField] private CinemachineImpulseSource impulseSource;
     
         [Header("Data")]
@@ -81,6 +83,7 @@ namespace Core
             AssessUtils.CheckRequirement(ref playerInput, this);
             AssessUtils.CheckRequirement(ref playerRigidBody2D, this);
             AssessUtils.CheckRequirement(ref playerAnimator, this);
+            AssessUtils.CheckRequirement(ref playerSkeletonAnimator, this);
             AssessUtils.CheckRequirement(ref impulseSource, this);
         }
 
@@ -191,8 +194,8 @@ namespace Core
         private void GameOver()
         {
             alive = false;
-            DOTween.To(() => playerAnimator.GetFloat(SpeedModifier),
-                value => playerAnimator.SetFloat(SpeedModifier, value),
+            DOTween.To(() => playerSkeletonAnimator.timeScale,
+                value => playerSkeletonAnimator.timeScale = value,
                 0.0f, 0.5f);
             GameOverEvent?.Invoke(score, distance);
         }
@@ -200,12 +203,25 @@ namespace Core
         private void UpdateLinearValue()
         {
             LinearScaleEvent?.Invoke(linearScale);
+
+            switch (linearScale)
+            {
+                case <= 0.4f: playerSkeletonAnimator.skeleton.SetSkin("Turtle-Small");
+                    break;
+                case >= 0.6f: playerSkeletonAnimator.skeleton.SetSkin("Turtle-Normal");
+                    break;
+                default:playerSkeletonAnimator.skeleton.SetSkin("Turtle-Normal");
+                    break;
+            }
+            
+            playerSkeletonAnimator.Skeleton.SetSlotsToSetupPose();
+            playerSkeletonAnimator.LateUpdate();
         }
 
         private void UpdateLinearSpeedModifier()
         {
             speedModifier = speedCurve.Evaluate(linearScale); 
-            playerAnimator.SetFloat(SpeedModifier, speedModifier);
+            playerSkeletonAnimator.timeScale = speedModifier;
         }
       
         private void OnDrawGizmos()
