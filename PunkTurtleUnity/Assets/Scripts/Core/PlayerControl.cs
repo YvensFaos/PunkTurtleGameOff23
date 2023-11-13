@@ -203,16 +203,25 @@ namespace Core
         private void UpdateLinearValue()
         {
             LinearScaleEvent?.Invoke(linearScale);
+
+            switch (linearScale)
+            {
+                case <= 0.4f: playerSkeletonAnimator.skeleton.SetSkin("Turtle-Small");
+                    break;
+                case >= 0.6f: playerSkeletonAnimator.skeleton.SetSkin("Turtle-Normal");
+                    break;
+                default:playerSkeletonAnimator.skeleton.SetSkin("Turtle-Normal");
+                    break;
+            }
+            
+            playerSkeletonAnimator.Skeleton.SetSlotsToSetupPose();
+            playerSkeletonAnimator.LateUpdate();
         }
 
         private void UpdateLinearSpeedModifier()
         {
             speedModifier = speedCurve.Evaluate(linearScale); 
-            // playerAnimator.SetFloat(SpeedModifier, speedModifier);
             playerSkeletonAnimator.timeScale = speedModifier;
-            // DOTween.To(() => playerSkeletonAnimator.timeScale,
-            //     value => playerSkeletonAnimator.timeScale = value,
-            //     0.0f, 0.5f);
         }
       
         private void OnDrawGizmos()
