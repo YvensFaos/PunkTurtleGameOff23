@@ -30,10 +30,14 @@ public class SpawnAreaControl : MonoBehaviour
 
    private void Spawn()
    {
-      DespawnRemainders();
+      if (spawnedObjects != null)
+      {
+         DespawnRemainders();   
+      }
       
       spawnedObjects = new List<SpriteRenderer>();
       var spawnCount = Random.Range(minSpawns, maxSpawns);
+      // DebugUtils.DebugLogMsg($"{name} - Spawning: {spawnCount}.");
       for (var i = 0; i < spawnCount; i++)
       {
          var spawnObject = RandomHelper<SpriteRenderer>.GetRandomFromList(spawnables);
@@ -51,6 +55,13 @@ public class SpawnAreaControl : MonoBehaviour
 
    private void DespawnRemainders()
    {
-      spawnedObjects?.ForEach(Destroy);
+      spawnedObjects = spawnedObjects.FindAll(sprite => sprite != null);
+      spawnedObjects?.ForEach(sprite =>
+      {
+         if (sprite != null)
+         {
+            Destroy(sprite.gameObject);   
+         }
+      });
    }
 }
