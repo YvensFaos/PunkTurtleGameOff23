@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Lean.Pool;
 using UnityEngine;
 using Utils;
 using Random = UnityEngine.Random;
@@ -39,7 +38,8 @@ public class SpawnAreaControl : MonoBehaviour
       {
          var spawnObject = RandomHelper<SpriteRenderer>.GetRandomFromList(spawnables);
          var position = RandomPointUtils.GetRandomPointWithBox2D(spawnArea);
-         var spawnedObject = LeanPool.Spawn(spawnObject, position, Quaternion.identity);
+         var spawnedObject = Instantiate(spawnObject, position, Quaternion.identity); 
+            //LeanPool.Spawn(spawnObject, position, Quaternion.identity);
          spawnedObjects.Add(spawnedObject);
 
          if (mirror)
@@ -51,9 +51,6 @@ public class SpawnAreaControl : MonoBehaviour
 
    private void DespawnRemainders()
    {
-      spawnedObjects?.ForEach(spawn =>
-      {
-         LeanPool.Despawn(spawn);
-      });
+      spawnedObjects?.ForEach(Destroy);
    }
 }

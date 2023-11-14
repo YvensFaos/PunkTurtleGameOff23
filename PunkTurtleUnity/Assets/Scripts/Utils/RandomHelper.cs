@@ -53,5 +53,11 @@ namespace Utils
             var randomPoint2D = (Vector2)circleCollider.bounds.center + Random.insideUnitCircle * circleCollider.radius;
             return new Vector3(randomPoint2D.x, randomPoint2D.y, 0.0f);
         }
+        
+        public static Vector2 GenerateRandomDirection2D()
+        {
+            var angle = Random.Range(0f, Mathf.PI * 2f);
+            return new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
+        }
     }
 }

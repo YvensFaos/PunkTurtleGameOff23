@@ -165,17 +165,18 @@ namespace Core
             });
         }
 
-        public void GetHit(SizeSO hitByObjectOfSize)
+        public bool GetHit(SizeSO hitByObjectOfSize)
         {
-            if (!hitByObjectOfSize.CanDamage(linearScale)) return;
+            if (!hitByObjectOfSize.CanDamage(linearScale)) return false;
             
             impulseSource.GenerateImpulseWithForce(2.0f);
             UpdateLives(-1);
             playerAnimator.SetTrigger(Hit);
 
-            if (lives > 0) return;
+            if (lives > 0) return true;
             //Game Over
             GameOver();
+            return true;
         }
 
         private IEnumerator DashCooldownCoroutine()

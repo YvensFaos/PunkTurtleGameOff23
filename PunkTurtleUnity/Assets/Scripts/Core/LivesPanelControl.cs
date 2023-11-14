@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using DG.Tweening;
-using Lean.Pool;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -39,7 +38,8 @@ public class LivesPanelControl : MonoBehaviour
 
     private void SpawnLive()
     {
-        var newLive = LeanPool.Spawn(livePrefab, transform);
+        var newLive = Instantiate(livePrefab, transform); 
+            //LeanPool.Spawn(livePrefab, transform);
         newLive.rectTransform.localScale = new Vector3(0, 0, 0);
         newLive.fillAmount = 0.0f;
         newLive.rectTransform.DOScale(new Vector3(1, 1, 1), 0.3f);
@@ -55,7 +55,8 @@ public class LivesPanelControl : MonoBehaviour
         removeLive.rectTransform.DOScale(new Vector3(0, 0, 0), 0.3f);
         removeLive.DOFillAmount(0.0f, 0.3f).OnComplete(() =>
         {
-            LeanPool.Despawn(removeLive);
+            Destroy(removeLive);
+            //LeanPool.Despawn(removeLive);
         });
     }
 }

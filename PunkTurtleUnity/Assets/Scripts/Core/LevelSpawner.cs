@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Lean.Pool;
 using UnityEngine;
 using Utils;
 
@@ -13,7 +12,8 @@ public class LevelSpawner : MonoBehaviour
         foreach (var pair in spawn)
         {
             var pairTwo = pair.Two;
-            LeanPool.Spawn(pair.One, pairTwo.position, pairTwo.rotation);
+            // LeanPool.Spawn(pair.One, pairTwo.position, pairTwo.rotation);
+            Instantiate(pair.One, pairTwo.position, pairTwo.rotation);
         }
     }
 }

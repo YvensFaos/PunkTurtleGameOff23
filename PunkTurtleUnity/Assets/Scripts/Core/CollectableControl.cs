@@ -1,7 +1,5 @@
-using System;
 using Core;
 using DG.Tweening;
-using Lean.Pool;
 using UnityEngine;
 using Utils;
 
@@ -33,7 +31,8 @@ public class CollectableControl : AgnosticCollisionSolver2D
         transform.DOMove(player.transform.position, 0.25f).OnComplete(() =>
         {
             player.UpdateScore(score);
-            LeanPool.Despawn(gameObject);
+            // LeanPool.Despawn(gameObject);
+            Destroy(gameObject);
         });
     }
 }

@@ -15,7 +15,7 @@ namespace Core
         protected override void Solve(GameObject collidedWith)
         {
             if (cooldown || !collidedWith.CompareTag("Player")) return;
-            PlayerControl.GetSingleton().GetHit(size);
+            if (!PlayerControl.GetSingleton().GetHit(size)) return;
             cooldown = true;
             StartCoroutine(ObstacleCooldown());
         }

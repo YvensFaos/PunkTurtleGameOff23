@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Lean.Pool;
 using UnityEngine;
 using Utils;
 
@@ -54,7 +53,8 @@ namespace Core
         public void SpawnNextBackground()
         {
             var prefab = RandomHelper<BackgroundSpawner>.GetRandomFromList(backgroundPrefabs);
-            LeanPool.Spawn(prefab, spawnNextPoint.position, Quaternion.identity);
+            //LeanPool.Spawn(prefab, spawnNextPoint.position, Quaternion.identity);
+            Instantiate(prefab, spawnNextPoint.position, Quaternion.identity);
         }
 
         public void StartKillTimer()
@@ -65,7 +65,8 @@ namespace Core
         private IEnumerator KillCoroutine()
         {
             yield return new WaitForSeconds(killTimer);
-            LeanPool.Despawn(gameObject, 0.1f);
+            //LeanPool.Despawn(gameObject, 0.1f);
+            Destroy(gameObject, 0.1f);
         }
 
         private void OnDrawGizmos()
