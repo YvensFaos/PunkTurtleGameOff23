@@ -110,6 +110,7 @@ MonoBehaviour:
   spawnNextPoint: {fileID: 1477848353060681522}
   backgroundPrefabs:
   - {fileID: 2399610159918396608}
+  - {fileID: 4353438024964415226, guid: b653c2d179f514062ade17773a4a8e90, type: 3}
   spawners:
   - {fileID: 8092977618205566467}
   - {fileID: 3776243566421160860}

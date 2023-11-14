@@ -37,7 +37,7 @@ namespace Core
             randomMoving = false;
             
             scalingTweener?.Kill();
-            scalingTweener = transform.DOPunchScale(new Vector3(0.525f, 0.525f, 1.0f), 0.3f, 1, 0.1F).SetLoops(-1);
+            scalingTweener = transform.DOShakeScale(0.2f, 0.03f).SetLoops(-1);
             
             StopAllCoroutines();
             if (randomDirection)
@@ -73,7 +73,7 @@ namespace Core
                 if (mirrorSprite && sprite != null)
                 {
                     sprite.flipX = movementDirection.x > 0;
-                    sprite.flipY = movementDirection.y > 0;
+                    sprite.flipY = movementDirection.y < 0;
                 }
                 
                 var objective = transform.position + new Vector3(movementDirection.y, movementDirection.y, 0);

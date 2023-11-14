@@ -142,5 +142,5 @@ MonoBehaviour:
   randomTimer: 2
   sprite: {fileID: 8304219088796546620}
   mirrorSprite: 1
-  distanceKill: 30
+  distanceKill: 300
   currentDistance: 0
