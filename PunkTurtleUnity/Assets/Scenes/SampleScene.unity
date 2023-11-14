@@ -942,6 +942,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1682814148493545909, guid: 763584f0008244d17bedce753369bb54, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7295552929758531015, guid: 763584f0008244d17bedce753369bb54, type: 3}
       propertyPath: m_Name
       value: PlayerTurtle

@@ -41,13 +41,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _NoiseSize: -11.03
+    - _NoiseSize: -10.97
     - _Speed: 0.5
     - _Step: 0.18
     - _YScaling: 0.05
     m_Colors:
     - _Direction: {r: 0, g: 1, b: 0, a: 0}
-    - _RemapTwirl: {r: 8.35, g: 0.12, b: 0, a: 0}
+    - _RemapTwirl: {r: 11.77, g: 0.05, b: 0, a: 0}
     - _RippleColor: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
     - _VoronoiColor: {r: 0.13999642, g: 0.237184, b: 0.24528301, a: 1}
     - _WaterColor: {r: 0.043137237, g: 0.8313726, b: 0.9019608, a: 1}
