@@ -54,7 +54,8 @@ namespace Core
         private void Update()
         {
             if (randomDirection) return;
-            transform.Translate(movementDirection * movementSpeed);
+            transform.Translate(
+                movementDirection * (movementSpeed * Time.deltaTime));
             CheckKillDistance();
         }
 
@@ -107,6 +108,13 @@ namespace Core
             var distanceVector = PlayerControl.GetSingleton().transform.position - transform.position;
             currentDistance = distanceVector.magnitude;
             return distanceVector.sqrMagnitude > (distanceKill * distanceKill);
+        }
+
+        private void OnDrawGizmos()
+        {
+            if (randomDirection) return;
+            var transformPosition = transform.position;
+            Gizmos.DrawLine(transformPosition, transformPosition + (Vector3) (movementDirection * movementSpeed));
         }
     }
 }
