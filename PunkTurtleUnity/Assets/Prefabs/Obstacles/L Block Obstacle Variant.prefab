@@ -10,11 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1828243944809160940, guid: e95afd69bfe0c4751ac1f2f2a0767ec9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.178056
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1828243944809160940, guid: e95afd69bfe0c4751ac1f2f2a0767ec9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.008674
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1828243944809160940, guid: e95afd69bfe0c4751ac1f2f2a0767ec9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -56,6 +56,14 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2.48
       objectReference: {fileID: 0}
+    - target: {fileID: 7576763045240883486, guid: e95afd69bfe0c4751ac1f2f2a0767ec9, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 8.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7576763045240883486, guid: e95afd69bfe0c4751ac1f2f2a0767ec9, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 9.92
+      objectReference: {fileID: 0}
     - target: {fileID: 7946759990463248244, guid: e95afd69bfe0c4751ac1f2f2a0767ec9, type: 3}
       propertyPath: m_Name
       value: L Block Obstacle Variant
@@ -66,19 +74,20 @@ PrefabInstance:
       objectReference: {fileID: 4198977303726608282, guid: c410b68394aed420ca86e6d1df52fa5d, type: 3}
     m_RemovedComponents:
     - {fileID: 5840013609973825292, guid: e95afd69bfe0c4751ac1f2f2a0767ec9, type: 3}
+    - {fileID: 7576763045240883486, guid: e95afd69bfe0c4751ac1f2f2a0767ec9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7946759990463248244, guid: e95afd69bfe0c4751ac1f2f2a0767ec9, type: 3}
-      insertIndex: 2
-      addedObject: {fileID: 7981189009599932383}
+      insertIndex: -1
+      addedObject: {fileID: 835947924902199451}
   m_SourcePrefab: {fileID: 100100000, guid: e95afd69bfe0c4751ac1f2f2a0767ec9, type: 3}
 --- !u!1 &2196584845728477593 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7946759990463248244, guid: e95afd69bfe0c4751ac1f2f2a0767ec9, type: 3}
   m_PrefabInstance: {fileID: 8084883121079568109}
   m_PrefabAsset: {fileID: 0}
---- !u!60 &7981189009599932383
+--- !u!60 &835947924902199451
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,14 +116,14 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.08, y: 4.96}
+    oldSize: {x: 8.16, y: 9.92}
     newSize: {x: 2.6101928, y: 6.5299997}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -122,18 +131,17 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.947164, y: 1.8486562}
-      - {x: 1.654328, y: 2.028443}
-      - {x: -0.7566732, y: 2.0421317}
-      - {x: -1.2871641, y: 2.0423448}
-      - {x: -1.5269508, y: 2.0821316}
-      - {x: -1.8736886, y: 2.00823}
-      - {x: -2.066524, y: 1.576673}
-      - {x: -2.04, y: -1.8564596}
-      - {x: -1.8010659, y: -2.108656}
-      - {x: 0.3619184, y: -2.0953937}
-      - {x: 0.56410325, y: -1.4571543}
-      - {x: 0.59999996, y: -0.67582047}
-      - {x: 1.6604264, y: -0.6362468}
-      - {x: 2.0797868, y: -0.4295091}
+    - - {x: 4.08, y: 4.44}
+      - {x: 3.6799998, y: 4.72}
+      - {x: -2.76, y: 4.88}
+      - {x: -2.76, y: 4.96}
+      - {x: -3.1599998, y: 4.96}
+      - {x: -3.8799999, y: 4.6}
+      - {x: -4.08, y: 4.4}
+      - {x: -4.08, y: -4.88}
+      - {x: -4, y: -4.96}
+      - {x: 1.1477022, y: -4.96}
+      - {x: 1.1999999, y: -2.28}
+      - {x: 3.48, y: -2.36}
+      - {x: 4.08, y: -1.92}
   m_UseDelaunayMesh: 0

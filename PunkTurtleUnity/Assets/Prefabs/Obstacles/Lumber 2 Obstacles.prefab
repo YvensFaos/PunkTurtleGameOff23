@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2503107836593172323}
   - component: {fileID: 6620920533009391975}
-  - component: {fileID: 3492841300446427695}
-  - component: {fileID: -1319982267338062451}
+  - component: {fileID: 7988479436372360228}
+  - component: {fileID: 6813140021621756321}
   m_Layer: 10
   m_Name: Lumber 2 Obstacles
   m_TagString: Untagged
@@ -86,8 +86,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &3492841300446427695
-BoxCollider2D:
+--- !u!60 &7988479436372360228
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -115,23 +115,45 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.006415844, y: 0.029698849}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.4, y: 1.34}
+    oldSize: {x: 8.8, y: 2.68}
     newSize: {x: 4.4, y: 1.34}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 4.297971, y: 0.86835575}
-  m_EdgeRadius: 0
---- !u!114 &-1319982267338062451
+  m_Points:
+    m_Paths:
+    - - {x: 4.4, y: -0.02}
+      - {x: 4.4, y: 1.06}
+      - {x: 4.2, y: 1.3399999}
+      - {x: 4, y: 1.3399999}
+      - {x: 1.9599999, y: 1.02}
+      - {x: 1.48, y: 1.3399999}
+      - {x: 0.96, y: 1.3399999}
+      - {x: 0.68, y: 1.14}
+      - {x: 0.59999996, y: 1.06}
+      - {x: -0.24, y: 0.97999996}
+      - {x: -1.8399999, y: 0.9}
+      - {x: -2.6399999, y: 1.1}
+      - {x: -3.9599998, y: 1.26}
+      - {x: -4.4, y: 0.7}
+      - {x: -4.4, y: -0.5}
+      - {x: -4.04, y: -1.06}
+      - {x: -3.6799998, y: -1.3}
+      - {x: -2.32, y: -1.3399999}
+      - {x: 3.9199998, y: -1.3399999}
+      - {x: 4.24, y: -1.06}
+      - {x: 4.2799997, y: -0.78}
+      - {x: 4.2799997, y: -0.5}
+  m_UseDelaunayMesh: 0
+--- !u!114 &6813140021621756321
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,8 +162,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 6196474216050600166}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4afdef2ab5724eeaa49ea7d3f8502021, type: 3}
+  m_Script: {fileID: 11500000, guid: cb0acd94f4584e86bffc08e098c8850d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cooldownTimer: 4
   size: {fileID: 11400000, guid: 79fc843ea51ac48babd47ee2f11a20d9, type: 2}
+  movementDirection: {x: 0, y: 1}
+  movementSpeed: 2
+  randomDirection: 0
+  randomMovement: 0
+  randomTimer: 0
+  sprite: {fileID: 0}
+  mirrorSprite: 0
+  distanceKill: 40
+  currentDistance: 0
