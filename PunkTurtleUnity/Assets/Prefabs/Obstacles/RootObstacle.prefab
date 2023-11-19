@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2974134647762169368}
   - component: {fileID: 7725277628759973951}
   - component: {fileID: 8538492498852177847}
+  - component: {fileID: -6856437539562593214}
   - component: {fileID: 8888546239080285799}
   m_Layer: 10
   m_Name: RootObstacle
@@ -100,6 +101,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooldownTimer: 4
   size: {fileID: 11400000, guid: 79fc843ea51ac48babd47ee2f11a20d9, type: 2}
+--- !u!114 &-6856437539562593214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3400629024910458560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9df23f94f44419dae910b4b83f2a652, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 7725277628759973951}
+  spawnCollider2D: {fileID: 8888546239080285799}
 --- !u!60 &8888546239080285799
 PolygonCollider2D:
   m_ObjectHideFlags: 0

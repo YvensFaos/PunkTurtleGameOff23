@@ -109,8 +109,12 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 07887e88545c844ec8de8470d61cdd31, type: 3}
   spawnNextPoint: {fileID: 1477848353060681522}
   backgroundPrefabs:
-  - {fileID: 2399610159918396608}
-  - {fileID: 4353438024964415226, guid: b653c2d179f514062ade17773a4a8e90, type: 3}
+  - one: {fileID: 6425114367290247758, guid: 5a2daf6e98d85483aa7d44811643f8b2, type: 3}
+    two: 30
+  - one: {fileID: 2399610159918396608}
+    two: 40
+  - one: {fileID: 4353438024964415226, guid: b653c2d179f514062ade17773a4a8e90, type: 3}
+    two: 30
   spawners:
   - {fileID: 8092977618205566467}
   - {fileID: 3776243566421160860}

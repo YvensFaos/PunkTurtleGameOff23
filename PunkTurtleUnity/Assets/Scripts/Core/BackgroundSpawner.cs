@@ -15,7 +15,7 @@ namespace Core
         [SerializeField]
         private Transform spawnNextPoint;
         [SerializeField]
-        private List<BackgroundSpawner> backgroundPrefabs;
+        private List<BackgroundSpawnerChancePair> backgroundPrefabs;
         [SerializeField] 
         private List<SpawnAreaControl> spawners;
         
@@ -52,8 +52,31 @@ namespace Core
 
         public void SpawnNextBackground()
         {
-            var prefab = RandomHelper<BackgroundSpawner>.GetRandomFromList(backgroundPrefabs);
-            //LeanPool.Spawn(prefab, spawnNextPoint.position, Quaternion.identity);
+            var sum = 0.0f;
+            backgroundPrefabs.ForEach(pair =>
+            {
+                sum += pair.Two;
+            });
+
+            var randomChance = RandomChanceUtils.GetRandom(sum);
+            var index = 0;
+            var found = false;
+            var cummulativeChange = 0;
+            var prefab = backgroundPrefabs[index].One;
+            do
+            {
+                
+                if (randomChance <= backgroundPrefabs[index].Two + sum)
+                {
+                    prefab = backgroundPrefabs[index].One;
+                    found = true;
+                }
+                else
+                {
+                    sum += backgroundPrefabs[index].Two;
+                    ++index;
+                }
+            } while (!found);
             Instantiate(prefab, spawnNextPoint.position, Quaternion.identity);
         }
 

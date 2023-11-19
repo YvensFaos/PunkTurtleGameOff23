@@ -17,6 +17,11 @@ namespace Utils
         {
             return Random.Range(0, max) <= upTo;
         }
+
+        public static float GetRandom(float upTo)
+        {
+            return Random.Range(0, upTo);
+        }
         
         public static float GetRandomInRange(Vector2 range)
         {
