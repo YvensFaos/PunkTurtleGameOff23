@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4457328833768271727
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1880114009877974114, guid: 9dbf1b6889424443f9a25213a3e85264, type: 3}
+      propertyPath: size
+      value: 
+      objectReference: {fileID: 11400000, guid: 79fc843ea51ac48babd47ee2f11a20d9, type: 2}
+    - target: {fileID: 1884599058414957461, guid: 9dbf1b6889424443f9a25213a3e85264, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.4845896
+      objectReference: {fileID: 0}
+    - target: {fileID: 1884599058414957461, guid: 9dbf1b6889424443f9a25213a3e85264, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.5786448
+      objectReference: {fileID: 0}
+    - target: {fileID: 1884599058414957461, guid: 9dbf1b6889424443f9a25213a3e85264, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1884599058414957461, guid: 9dbf1b6889424443f9a25213a3e85264, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1884599058414957461, guid: 9dbf1b6889424443f9a25213a3e85264, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1884599058414957461, guid: 9dbf1b6889424443f9a25213a3e85264, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1884599058414957461, guid: 9dbf1b6889424443f9a25213a3e85264, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1884599058414957461, guid: 9dbf1b6889424443f9a25213a3e85264, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1884599058414957461, guid: 9dbf1b6889424443f9a25213a3e85264, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1884599058414957461, guid: 9dbf1b6889424443f9a25213a3e85264, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941285411005377653, guid: 9dbf1b6889424443f9a25213a3e85264, type: 3}
+      propertyPath: m_Size.x
+      value: 2.41631
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941285411005377653, guid: 9dbf1b6889424443f9a25213a3e85264, type: 3}
+      propertyPath: m_Size.y
+      value: 2.0665202
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941285411005377653, guid: 9dbf1b6889424443f9a25213a3e85264, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0018876791
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941285411005377653, guid: 9dbf1b6889424443f9a25213a3e85264, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.28180528
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941285411005377653, guid: 9dbf1b6889424443f9a25213a3e85264, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 3.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941285411005377653, guid: 9dbf1b6889424443f9a25213a3e85264, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 7868029265476396045, guid: 9dbf1b6889424443f9a25213a3e85264, type: 3}
+      propertyPath: m_Name
+      value: Sand Small Block Obstacle Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8695447154584605374, guid: 9dbf1b6889424443f9a25213a3e85264, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -8795717216779230455, guid: c410b68394aed420ca86e6d1df52fa5d, type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9dbf1b6889424443f9a25213a3e85264, type: 3}
