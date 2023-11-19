@@ -1,3 +1,4 @@
+using NaughtyAttributes;
 using UnityEngine;
 
 namespace Core
@@ -8,9 +9,12 @@ namespace Core
         private SpriteRenderer spriteRenderer;
         [SerializeField]
         private Collider2D spawnCollider2D;
+        [SerializeField, EnableIf("HasCollider2D")]
+        private bool checkPlacement = true;
 
         public SpriteRenderer SpawnSpriteRenderer => spriteRenderer;
         public Collider2D SpawnCollider2D => spawnCollider2D;
-        public bool HasCollider => spawnCollider2D != null;
+        public bool HasCollider =>  HasCollider2D && checkPlacement;
+        private bool HasCollider2D => spawnCollider2D != null;
     }
 }
