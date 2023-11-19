@@ -399,10 +399,10 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 100
   field of view: 60
   orthographic: 1
-  orthographic size: 15
+  orthographic size: 24
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -427,7 +427,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 9, z: -12.5}
+  m_LocalPosition: {x: 0, y: 8.999707, z: -12.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -794,6 +794,38 @@ PrefabInstance:
     - target: {fileID: 78547914903876677, guid: 49fd0cff0d99c42dea6b7b1809c31567, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 656182057242776285, guid: 49fd0cff0d99c42dea6b7b1809c31567, type: 3}
+      propertyPath: curve.curve.m_Curve.Array.data[0].value
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 656182057242776285, guid: 49fd0cff0d99c42dea6b7b1809c31567, type: 3}
+      propertyPath: curve.curve.m_Curve.Array.data[1].value
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 656182057242776285, guid: 49fd0cff0d99c42dea6b7b1809c31567, type: 3}
+      propertyPath: curve.curve.m_Curve.Array.data[0].inSlope
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 656182057242776285, guid: 49fd0cff0d99c42dea6b7b1809c31567, type: 3}
+      propertyPath: curve.curve.m_Curve.Array.data[1].inSlope
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 656182057242776285, guid: 49fd0cff0d99c42dea6b7b1809c31567, type: 3}
+      propertyPath: curve.curve.m_Curve.Array.data[2].inSlope
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 656182057242776285, guid: 49fd0cff0d99c42dea6b7b1809c31567, type: 3}
+      propertyPath: curve.curve.m_Curve.Array.data[0].outSlope
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 656182057242776285, guid: 49fd0cff0d99c42dea6b7b1809c31567, type: 3}
+      propertyPath: curve.curve.m_Curve.Array.data[1].outSlope
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 656182057242776285, guid: 49fd0cff0d99c42dea6b7b1809c31567, type: 3}
+      propertyPath: curve.curve.m_Curve.Array.data[2].outSlope
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1252556762178167980, guid: 49fd0cff0d99c42dea6b7b1809c31567, type: 3}
       propertyPath: m_Name
