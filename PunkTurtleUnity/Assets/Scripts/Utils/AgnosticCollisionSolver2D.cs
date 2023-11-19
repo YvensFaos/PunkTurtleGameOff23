@@ -28,5 +28,17 @@ namespace Utils
         }
 
         protected virtual void SolveExit(GameObject exitWith) { }
+
+        // ReSharper disable once MemberCanBePrivate.Global
+        public static bool ValidPosition(Vector2 position, Vector2 size, ref RaycastHit2D[] colliders)
+        {
+            return Physics2D.BoxCastNonAlloc(position, size, 0f, new Vector2(1.0f,0.0f), colliders, 0.01f) == 0;
+        }
+
+        public static bool ValidPosition(Vector2 position, Bounds bounds, ref RaycastHit2D[] colliders)
+        {
+            var size = new Vector2(bounds.size.x, bounds.size.y);
+            return ValidPosition(position, size, ref colliders);
+        }
     }
 }

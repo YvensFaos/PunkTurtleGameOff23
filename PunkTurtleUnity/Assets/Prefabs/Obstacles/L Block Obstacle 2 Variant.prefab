@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 9.92
       objectReference: {fileID: 0}
+    - target: {fileID: 7824404046956532731, guid: e95afd69bfe0c4751ac1f2f2a0767ec9, type: 3}
+      propertyPath: spawnCollider2D
+      value: 
+      objectReference: {fileID: 543305526493151544}
     - target: {fileID: 7946759990463248244, guid: e95afd69bfe0c4751ac1f2f2a0767ec9, type: 3}
       propertyPath: m_Name
       value: L Block Obstacle 2 Variant

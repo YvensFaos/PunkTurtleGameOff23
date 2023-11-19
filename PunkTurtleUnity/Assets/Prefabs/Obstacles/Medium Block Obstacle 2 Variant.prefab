@@ -20,6 +20,10 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 13.64
       objectReference: {fileID: 0}
+    - target: {fileID: 3307556630458078562, guid: 2e96fb185903f4c43a2089ee07e988a6, type: 3}
+      propertyPath: spawnCollider2D
+      value: 
+      objectReference: {fileID: 7576763045240883486}
     - target: {fileID: 3403458146127131117, guid: 2e96fb185903f4c43a2089ee07e988a6, type: 3}
       propertyPath: m_Name
       value: Medium Block Obstacle 2 Variant

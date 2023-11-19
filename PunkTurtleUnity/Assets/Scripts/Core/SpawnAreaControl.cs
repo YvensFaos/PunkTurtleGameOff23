@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Core;
 using UnityEngine;
 using Utils;
 using Random = UnityEngine.Random;
@@ -8,7 +9,7 @@ public class SpawnAreaControl : MonoBehaviour
    [SerializeField]
    private BoxCollider2D spawnArea;
    [SerializeField]
-   private List<SpriteRenderer> spawnables;
+   private List<SpawnObject> spawnables;
    [SerializeField]
    private int minSpawns;
    [SerializeField]
@@ -16,7 +17,14 @@ public class SpawnAreaControl : MonoBehaviour
    [SerializeField]
    private bool mirror;
 
-   private List<SpriteRenderer> spawnedObjects;
+   private List<SpawnObject> spawnedObjects;
+   private RaycastHit2D[] cashRaycastHit;
+   private const int SAFE_CHECK = 10;
+
+   private void Awake()
+   {
+      cashRaycastHit = new RaycastHit2D[1];
+   }
    
    private void OnEnable()
    {
@@ -35,20 +43,41 @@ public class SpawnAreaControl : MonoBehaviour
          DespawnRemainders();   
       }
       
-      spawnedObjects = new List<SpriteRenderer>();
+      spawnedObjects = new List<SpawnObject>();
       var spawnCount = Random.Range(minSpawns, maxSpawns);
-      // DebugUtils.DebugLogMsg($"{name} - Spawning: {spawnCount}.");
+      
+      
       for (var i = 0; i < spawnCount; i++)
       {
-         var spawnObject = RandomHelper<SpriteRenderer>.GetRandomFromList(spawnables);
+         var spawnObject = RandomHelper<SpawnObject>.GetRandomFromList(spawnables);
          var position = RandomPointUtils.GetRandomPointWithBox2D(spawnArea);
          var spawnedObject = Instantiate(spawnObject, position, Quaternion.identity); 
-            //LeanPool.Spawn(spawnObject, position, Quaternion.identity);
+         if (spawnedObject.HasCollider)
+         {
+            var safeCheck = SAFE_CHECK;
+            var collider = spawnedObject.SpawnCollider2D;
+            while (--safeCheck > 0 &&
+                   !AgnosticCollisionSolver2D.ValidPosition(position, collider.bounds, ref cashRaycastHit))
+            {
+               position = RandomPointUtils.GetRandomPointWithBox2D(spawnArea);
+            }
+
+            if (safeCheck >= 0)
+            {
+               spawnedObject.transform.position = position;
+            }
+            else
+            {
+               DebugUtils.DebugLogErrorMsg($"{spawnedObject.name} could not find a suitable position. Collided with {cashRaycastHit[0].transform.name}.");
+            }
+         }   
+         //LeanPool.Spawn(spawnObject, position, Quaternion.identity);
+            
          spawnedObjects.Add(spawnedObject);
 
          if (mirror)
          {
-            spawnedObject.flipX = true;
+            spawnedObject.SpawnSpriteRenderer.flipX = true;
          }
       }
    }

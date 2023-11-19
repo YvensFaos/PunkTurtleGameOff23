@@ -15,7 +15,7 @@ namespace Core
         [Header("Components")]
         [SerializeField] private PlayerInput playerInput;
         [SerializeField] private Rigidbody2D playerRigidBody2D;
-        [SerializeField] private Animator playerAnimator;
+        // [SerializeField] private Animator playerAnimator;
         [SerializeField] private SkeletonAnimation playerSkeletonAnimator;
         [SerializeField] private CinemachineImpulseSource impulseSource;
     
@@ -82,7 +82,7 @@ namespace Core
         
             AssessUtils.CheckRequirement(ref playerInput, this);
             AssessUtils.CheckRequirement(ref playerRigidBody2D, this);
-            AssessUtils.CheckRequirement(ref playerAnimator, this);
+            // AssessUtils.CheckRequirement(ref playerAnimator, this);
             AssessUtils.CheckRequirement(ref playerSkeletonAnimator, this);
             AssessUtils.CheckRequirement(ref impulseSource, this);
         }
@@ -171,7 +171,7 @@ namespace Core
             
             impulseSource.GenerateImpulseWithForce(2.0f);
             UpdateLives(-1);
-            playerAnimator.SetTrigger(Hit);
+            // playerAnimator.SetTrigger(Hit);
 
             if (lives > 0) return true;
             //Game Over
