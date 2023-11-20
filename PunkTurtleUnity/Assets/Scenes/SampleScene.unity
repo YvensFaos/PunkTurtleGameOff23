@@ -184,9 +184,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawn:
-  - one: {fileID: 2582009383403180038, guid: e2c1222704eaf417b945a434c035e54c, type: 3}
+  - one: {fileID: 7640227714866444034, guid: c94b4225cab6743e98bce4803e82c9c5, type: 3}
     two: {fileID: 25332054}
-  - one: {fileID: 2582009383403180038, guid: e2c1222704eaf417b945a434c035e54c, type: 3}
+  - one: {fileID: 7640227714866444034, guid: c94b4225cab6743e98bce4803e82c9c5, type: 3}
     two: {fileID: 576300946}
 --- !u!4 &129425550
 Transform:
