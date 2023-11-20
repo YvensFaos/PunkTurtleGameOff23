@@ -974,98 +974,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 769862947266720290, guid: 763584f0008244d17bedce753369bb54, type: 3}
-      propertyPath: defaultSpeed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 769862947266720290, guid: 763584f0008244d17bedce753369bb54, type: 3}
-      propertyPath: scaleCurve.curvePoints.Array.data[0].two
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 769862947266720290, guid: 763584f0008244d17bedce753369bb54, type: 3}
-      propertyPath: scaleCurve.curvePoints.Array.data[1].two
-      value: 1.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 769862947266720290, guid: 763584f0008244d17bedce753369bb54, type: 3}
-      propertyPath: scaleCurve.curvePoints.Array.data[2].two
-      value: 1.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 769862947266720290, guid: 763584f0008244d17bedce753369bb54, type: 3}
-      propertyPath: speedCurve.curvePoints.Array.data[0].two
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 769862947266720290, guid: 763584f0008244d17bedce753369bb54, type: 3}
-      propertyPath: speedCurve.curvePoints.Array.data[1].two
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 769862947266720290, guid: 763584f0008244d17bedce753369bb54, type: 3}
-      propertyPath: speedCurve.curvePoints.Array.data[2].two
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 769862947266720290, guid: 763584f0008244d17bedce753369bb54, type: 3}
-      propertyPath: scaleCurve.curve.m_Curve.Array.data[0].value
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 769862947266720290, guid: 763584f0008244d17bedce753369bb54, type: 3}
-      propertyPath: scaleCurve.curve.m_Curve.Array.data[1].value
-      value: 1.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 769862947266720290, guid: 763584f0008244d17bedce753369bb54, type: 3}
-      propertyPath: scaleCurve.curve.m_Curve.Array.data[2].value
-      value: 1.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 769862947266720290, guid: 763584f0008244d17bedce753369bb54, type: 3}
-      propertyPath: speedCurve.curve.m_Curve.Array.data[0].value
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 769862947266720290, guid: 763584f0008244d17bedce753369bb54, type: 3}
-      propertyPath: speedCurve.curve.m_Curve.Array.data[1].value
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 769862947266720290, guid: 763584f0008244d17bedce753369bb54, type: 3}
-      propertyPath: speedCurve.curve.m_Curve.Array.data[2].value
-      value: 1.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 769862947266720290, guid: 763584f0008244d17bedce753369bb54, type: 3}
-      propertyPath: scaleCurve.curve.m_Curve.Array.data[1].inSlope
-      value: 1.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 769862947266720290, guid: 763584f0008244d17bedce753369bb54, type: 3}
-      propertyPath: scaleCurve.curve.m_Curve.Array.data[2].inSlope
-      value: 1.0999999
-      objectReference: {fileID: 0}
-    - target: {fileID: 769862947266720290, guid: 763584f0008244d17bedce753369bb54, type: 3}
-      propertyPath: speedCurve.curve.m_Curve.Array.data[0].inSlope
-      value: -4
-      objectReference: {fileID: 0}
-    - target: {fileID: 769862947266720290, guid: 763584f0008244d17bedce753369bb54, type: 3}
-      propertyPath: speedCurve.curve.m_Curve.Array.data[1].inSlope
-      value: -2.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 769862947266720290, guid: 763584f0008244d17bedce753369bb54, type: 3}
-      propertyPath: scaleCurve.curve.m_Curve.Array.data[1].outSlope
-      value: 1.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 769862947266720290, guid: 763584f0008244d17bedce753369bb54, type: 3}
-      propertyPath: scaleCurve.curve.m_Curve.Array.data[2].outSlope
-      value: 1.0999999
-      objectReference: {fileID: 0}
-    - target: {fileID: 769862947266720290, guid: 763584f0008244d17bedce753369bb54, type: 3}
-      propertyPath: speedCurve.curve.m_Curve.Array.data[0].outSlope
-      value: -4
-      objectReference: {fileID: 0}
-    - target: {fileID: 769862947266720290, guid: 763584f0008244d17bedce753369bb54, type: 3}
-      propertyPath: speedCurve.curve.m_Curve.Array.data[1].outSlope
-      value: -2.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 769862947266720290, guid: 763584f0008244d17bedce753369bb54, type: 3}
-      propertyPath: scaleCurve.curve.m_Curve.Array.data[1].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 769862947266720290, guid: 763584f0008244d17bedce753369bb54, type: 3}
-      propertyPath: speedCurve.curve.m_Curve.Array.data[1].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
     - target: {fileID: 1682814148493545909, guid: 763584f0008244d17bedce753369bb54, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -1073,10 +981,6 @@ PrefabInstance:
     - target: {fileID: 7295552929758531015, guid: 763584f0008244d17bedce753369bb54, type: 3}
       propertyPath: m_Name
       value: PlayerTurtle
-      objectReference: {fileID: 0}
-    - target: {fileID: 9172321225188934898, guid: 763584f0008244d17bedce753369bb54, type: 3}
-      propertyPath: m_RootOrder
-      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 9172321225188934898, guid: 763584f0008244d17bedce753369bb54, type: 3}
       propertyPath: m_LocalPosition.x
