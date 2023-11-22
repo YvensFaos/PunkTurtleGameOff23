@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2979238942960058609}
   - component: {fileID: 4667917737669962557}
   m_Layer: 10
-  m_Name: Leaves
+  m_Name: Right Leaves
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 50
-  m_Sprite: {fileID: -5326241610264462766, guid: c410b68394aed420ca86e6d1df52fa5d, type: 3}
+  m_Sprite: {fileID: 6780882683070528005, guid: 9459c8e34b8114d31a89ba032119d763, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -115,6 +115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transparencyRenderer: {fileID: 6816362011515075026}
+  transparency: 0.5
 --- !u!70 &4667917737669962557
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

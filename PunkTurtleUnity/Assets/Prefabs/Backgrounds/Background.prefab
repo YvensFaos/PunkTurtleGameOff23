@@ -628,7 +628,7 @@ PrefabInstance:
     - target: {fileID: 8390777241578555937, guid: ec0897a6ca7dc4af8b1d4ca4a3d41583, type: 3}
       propertyPath: spawnables.Array.data[1]
       value: 
-      objectReference: {fileID: -689710166785875134, guid: 401aceb3131a0441a937ed419e761db9, type: 3}
+      objectReference: {fileID: -689710166785875134, guid: c9ecc203a261f4515ad11a7d38cc7083, type: 3}
     - target: {fileID: 8390777241578555937, guid: ec0897a6ca7dc4af8b1d4ca4a3d41583, type: 3}
       propertyPath: spawnables.Array.data[2]
       value: 
@@ -643,7 +643,7 @@ PrefabInstance:
       objectReference: {fileID: 7547706943480788980, guid: e3a6e1ea8371e409ab744b0a8cbcc3ce, type: 3}
     - target: {fileID: 9193464405453649978, guid: ec0897a6ca7dc4af8b1d4ca4a3d41583, type: 3}
       propertyPath: m_Size.x
-      value: 6.6895113
+      value: 4.1521683
       objectReference: {fileID: 0}
     - target: {fileID: 9193464405453649978, guid: ec0897a6ca7dc4af8b1d4ca4a3d41583, type: 3}
       propertyPath: m_Size.y
@@ -651,7 +651,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9193464405453649978, guid: ec0897a6ca7dc4af8b1d4ca4a3d41583, type: 3}
       propertyPath: m_Offset.x
-      value: -16.995008
+      value: -18
       objectReference: {fileID: 0}
     - target: {fileID: 9193464405453649978, guid: ec0897a6ca7dc4af8b1d4ca4a3d41583, type: 3}
       propertyPath: m_Offset.y
@@ -748,7 +748,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8390777241578555937, guid: ec0897a6ca7dc4af8b1d4ca4a3d41583, type: 3}
       propertyPath: mirror
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8390777241578555937, guid: ec0897a6ca7dc4af8b1d4ca4a3d41583, type: 3}
       propertyPath: maxSpawns
@@ -765,7 +765,7 @@ PrefabInstance:
     - target: {fileID: 8390777241578555937, guid: ec0897a6ca7dc4af8b1d4ca4a3d41583, type: 3}
       propertyPath: spawnables.Array.data[0]
       value: 
-      objectReference: {fileID: -6856437539562593214, guid: 806b9e3dacecb4d6da1f6dc27dc6e402, type: 3}
+      objectReference: {fileID: 9034120582446266871, guid: 13c403f1ae0f84fd9acfea80be124fbe, type: 3}
     - target: {fileID: 8390777241578555937, guid: ec0897a6ca7dc4af8b1d4ca4a3d41583, type: 3}
       propertyPath: spawnables.Array.data[1]
       value: 
@@ -792,7 +792,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9193464405453649978, guid: ec0897a6ca7dc4af8b1d4ca4a3d41583, type: 3}
       propertyPath: m_Offset.x
-      value: 17.200138
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 9193464405453649978, guid: ec0897a6ca7dc4af8b1d4ca4a3d41583, type: 3}
       propertyPath: m_Offset.y

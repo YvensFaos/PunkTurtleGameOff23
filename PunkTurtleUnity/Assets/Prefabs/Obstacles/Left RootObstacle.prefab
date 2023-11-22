@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -6856437539562593214}
   - component: {fileID: 8888546239080285799}
   m_Layer: 10
-  m_Name: RootObstacle
+  m_Name: Left RootObstacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 6447443981480896846, guid: c410b68394aed420ca86e6d1df52fa5d, type: 3}
+  m_Sprite: {fileID: 5887349078530981051, guid: 9459c8e34b8114d31a89ba032119d763, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -115,6 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 7725277628759973951}
   spawnCollider2D: {fileID: 8888546239080285799}
+  checkPlacement: 1
 --- !u!60 &8888546239080285799
 PolygonCollider2D:
   m_ObjectHideFlags: 0
