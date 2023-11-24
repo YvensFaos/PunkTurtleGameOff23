@@ -1,3 +1,4 @@
+using System.Collections;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
@@ -15,6 +16,14 @@ namespace Core
         private LivesPanelControl shellPlacer;
         [SerializeField]
         private GameOverPanelControl gameOverPanel;
+        [SerializeField] 
+        private GameObject dashTextObject;
+        [SerializeField] 
+        private GameObject invincibilityTextObject;
+        [SerializeField] 
+        private GameObject doubleTextObject;
+
+        private Coroutine textDisplayCoroutine;
 
         private void Awake()
         {
@@ -31,6 +40,7 @@ namespace Core
             playerControl.RegisterUpdateDistance(UpdateDistance);
             playerControl.RegisterUpdateLives(UpdateLives);
             playerControl.RegisterGameOverEvent(GameOver);
+            playerControl.RegisterGetCollectableEvent(GetCollectable);
             
             //Force an update on the amount of lives to initialize this component
             playerControl.UpdateLives(0);
@@ -44,6 +54,7 @@ namespace Core
             playerControl.UnregisterUpdateDistance(UpdateDistance);
             playerControl.UnregisterUpdateLives(UpdateLives);
             playerControl.UnregisterGameOverEvent(GameOver);
+            playerControl.UnregisterGetCollectableEvent(GetCollectable);
         }
 
         private void UpdateScore(int score)
@@ -69,6 +80,31 @@ namespace Core
         {
             gameOverPanel.gameObject.SetActive(true);
             gameOverPanel.GameOver(score, distance);   
+        }
+
+        private void GetCollectable(CollectableControl collectable)
+        {
+            dashTextObject.SetActive(false);
+            invincibilityTextObject.SetActive(false);
+            doubleTextObject.SetActive(false);
+
+            if (textDisplayCoroutine != null)
+            {
+                StopCoroutine(textDisplayCoroutine);
+            }
+            
+            if (collectable is DashCollectableControl)
+            {
+                textDisplayCoroutine = StartCoroutine(DisplayForATime(dashTextObject));
+            }
+            //TODO add others
+        }
+
+        private IEnumerator DisplayForATime(GameObject textObject)
+        {
+            textObject.SetActive(true);
+            yield return new WaitForSeconds(3.0f);
+            textObject.SetActive(false);
         }
     }
 }
