@@ -28,7 +28,7 @@ public class CollectableControl : AgnosticCollisionSolver2D
         var finalColor = Color.white;
         finalColor.a = 0.0f;
         spriteRenderer.DOColor(finalColor, 0.22f);
-        transform.DOMove(player.transform.position, 0.25f).OnComplete(() =>
+        transform.DOMove(player.GetMouthPlacement(), 0.25f).OnComplete(() =>
         {
             player.UpdateScore(score);
             // LeanPool.Despawn(gameObject);

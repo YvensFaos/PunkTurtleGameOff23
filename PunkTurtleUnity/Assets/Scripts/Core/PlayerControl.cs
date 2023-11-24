@@ -15,9 +15,9 @@ namespace Core
         [Header("Components")]
         [SerializeField] private PlayerInput playerInput;
         [SerializeField] private Rigidbody2D playerRigidBody2D;
-        // [SerializeField] private Animator playerAnimator;
         [SerializeField] private SkeletonAnimation playerSkeletonAnimator;
         [SerializeField] private CinemachineImpulseSource impulseSource;
+        [SerializeField] private Transform mouthPlacement;
     
         [Header("Data")]
         [SerializeField] private float defaultSpeed;
@@ -126,6 +126,28 @@ namespace Core
             else
             {
                 Vector2 movementVector = new(move.x, 1.0f); //1.0 on y for always moving up
+                switch (move.x)
+                {
+                    case < -0.2f:
+                        if (playerSkeletonAnimator.AnimationName != "Left")
+                        {
+                            playerSkeletonAnimator.state.SetAnimation(0, "Left", true);    
+                        }
+                        break;
+                    case > 0.2f:
+                        if (playerSkeletonAnimator.AnimationName != "Right")
+                        {
+                            playerSkeletonAnimator.state.SetAnimation(0, "Right", true);
+                        }
+                        break;
+                    default:
+                        if (playerSkeletonAnimator.AnimationName != "Forward")
+                        {
+                            playerSkeletonAnimator.state.SetAnimation(0, "Forward", true);
+                        }
+                        break;
+                }
+                 
                 movement = movementVector.normalized * (defaultSpeed * speedModifier * Time.deltaTime);
             }
             playerRigidBody2D.MovePosition(playerRigidBody2D.position + movement);
@@ -224,12 +246,19 @@ namespace Core
             speedModifier = speedCurve.Evaluate(linearScale); 
             playerSkeletonAnimator.timeScale = speedModifier;
         }
-      
+        
         private void OnDrawGizmos()
         {
             Gizmos.color = Color.red;
             Gizmos.DrawLine(transform.position, transform.position + new Vector3(move.x, move.y, 0));
+
+            if (mouthPlacement != null)
+            {
+                Gizmos.DrawWireSphere(mouthPlacement.position, 2.0f);
+            }
         }
+
+        public Vector3 GetMouthPlacement() => mouthPlacement.position;
 
         [Button("Initialize Curves")]
         private void InitializeCurves()
