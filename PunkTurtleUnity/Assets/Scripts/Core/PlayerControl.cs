@@ -24,6 +24,7 @@ namespace Core
         [SerializeField, Range(2, 20)] private int scaleFactor = 2;
         [SerializeField] private CurveHelper scaleCurve;
         [SerializeField] private CurveHelper speedCurve;
+        [SerializeField] private float dashDefaultTimer = 10.0f;
         [SerializeField] private float dashForce;
         [SerializeField] private float dashCoolDown;
         [SerializeField] private SpriteRenderer dashCoolDownImage;
@@ -32,30 +33,29 @@ namespace Core
         [SerializeField, ReadOnly] private int lives;
         [SerializeField] private int score;
         [SerializeField] private float distance;
+        [SerializeField, ReadOnly]
+        private float linearScale;
 
         //Internal Variables
         private Vector2 move = new(0,0);
         private float speedModifier = 1;
         private bool alive = true;
+        private bool dashActive;
+        private float dashTimer;
         private bool dashLeft;
         private bool dashRight;
         private bool isDashOnCooldown;
-
         private float scaleStep;
-        [SerializeField, ReadOnly]
-        private float linearScale;
         private bool scaleCooldown;
+        private Coroutine dashCoroutine;
 
         //Actions
         private UnityAction<int> ScoreUpdateEvent;
         private UnityAction<int> LivesUpdateEvent;
         private UnityAction<float> DistanceUpdateEvent;
         private UnityAction<float> LinearScaleEvent;
+        private UnityAction<CollectableControl> GetCollectable;
         private UnityAction<int, float> GameOverEvent;
-        
-        //Cached
-        private static readonly int SpeedModifier = Animator.StringToHash("SpeedModifier");
-        private static readonly int Hit = Animator.StringToHash("GetHit");
 
         #region Input Actions
         public void OnMove(InputValue value)
@@ -65,12 +65,14 @@ namespace Core
 
         public void OnDashLeft(InputValue value)
         {
+            if (!dashActive) return;
             if (isDashOnCooldown) return;
             dashLeft = true;
         }
 
         public void OnDashRight(InputValue value)
         {
+            if (!dashActive) return;
             if (isDashOnCooldown) return;
             dashRight = true;
         }
@@ -82,7 +84,6 @@ namespace Core
         
             AssessUtils.CheckRequirement(ref playerInput, this);
             AssessUtils.CheckRequirement(ref playerRigidBody2D, this);
-            // AssessUtils.CheckRequirement(ref playerAnimator, this);
             AssessUtils.CheckRequirement(ref playerSkeletonAnimator, this);
             AssessUtils.CheckRequirement(ref impulseSource, this);
         }
@@ -258,6 +259,27 @@ namespace Core
             }
         }
 
+        
+        public void ActivateDash()
+        {
+            if (dashActive)
+            {
+                if (dashCoroutine != null)
+                {
+                    StopCoroutine(dashCoroutine);
+                }
+            }
+
+            dashActive = true;
+            dashCoroutine = StartCoroutine(DashTimerCoroutine());
+        }
+
+        private IEnumerator DashTimerCoroutine()
+        {
+            yield return new WaitForSeconds(dashDefaultTimer);
+            dashActive = false;
+        }
+        
         public Vector3 GetMouthPlacement() => mouthPlacement.position;
 
         [Button("Initialize Curves")]
@@ -285,6 +307,11 @@ namespace Core
         {
             distance += incrementDistance;
             DistanceUpdateEvent?.Invoke(distance);
+        }
+
+        public void Collect(CollectableControl collectable)
+        {
+            GetCollectable?.Invoke(collectable);
         }
 
         public void RegisterUpdateScore(UnityAction<int> updateScoreAction)
@@ -335,6 +362,16 @@ namespace Core
         public void UnregisterGameOverEvent(UnityAction<int, float> gameOverEvent)
         {
             GameOverEvent -= gameOverEvent;
+        }
+        
+        public void RegisterGetCollectableEvent(UnityAction<CollectableControl> getCollectableEvent)
+        {
+            GetCollectable += getCollectableEvent;
+        }
+    
+        public void UnregisterGetCollectableEvent(UnityAction<CollectableControl> getCollectableEvent)
+        {
+            GetCollectable -= getCollectableEvent;
         }
         #endregion
     }

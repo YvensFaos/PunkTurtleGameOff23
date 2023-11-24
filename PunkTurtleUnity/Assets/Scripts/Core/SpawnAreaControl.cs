@@ -14,6 +14,8 @@ public class SpawnAreaControl : MonoBehaviour
    private int minSpawns;
    [SerializeField]
    private int maxSpawns;
+   [SerializeField] 
+   private float chance;
    [SerializeField]
    private bool mirror;
 
@@ -42,10 +44,16 @@ public class SpawnAreaControl : MonoBehaviour
       {
          DespawnRemainders();   
       }
-      
       spawnedObjects = new List<SpawnObject>();
+
+      if (chance > 0.0f)
+      {
+         if (!RandomChanceUtils.GetChance(chance))
+         {
+            return;
+         }
+      }
       var spawnCount = Random.Range(minSpawns, maxSpawns);
-      
       
       for (var i = 0; i < spawnCount; i++)
       {
@@ -84,6 +92,8 @@ public class SpawnAreaControl : MonoBehaviour
 
    private void DespawnRemainders()
    {
+      if (spawnedObjects == null) return;
+      
       spawnedObjects = spawnedObjects.FindAll(sprite => sprite != null);
       spawnedObjects?.ForEach(sprite =>
       {

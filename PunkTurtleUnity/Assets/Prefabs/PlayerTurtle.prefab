@@ -6062,6 +6062,7 @@ MonoBehaviour:
       two: 1
     - one: 1
       two: 0.5
+  dashDefaultTimer: 13
   dashForce: 400
   dashCoolDown: 4
   dashCoolDownImage: {fileID: 4545323115032672554}
