@@ -10,6 +10,8 @@ public class LivesPanelControl : MonoBehaviour
     private Image livePrefab;
     [SerializeField]
     private List<Image> liveImages;
+    [SerializeField]
+    private HorizontalLayoutGroup liveGrouper;
 
     public void UpdateLives(int lives)
     {
@@ -34,6 +36,8 @@ public class LivesPanelControl : MonoBehaviour
                 DespawnLive(index--);
             }
         }
+
+        liveGrouper.spacing = 14.0f;
     }
 
     private void SpawnLive()

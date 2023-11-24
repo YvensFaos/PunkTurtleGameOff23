@@ -275,7 +275,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 0
+  m_Spacing: 14
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -297,6 +297,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   livePrefab: {fileID: 2035207971492764124, guid: e109ff830b2b847b59d9592a1230c9c4, type: 3}
   liveImages: []
+  liveGrouper: {fileID: 1346653732935017410}
 --- !u!1 &3250147733721180283
 GameObject:
   m_ObjectHideFlags: 0
