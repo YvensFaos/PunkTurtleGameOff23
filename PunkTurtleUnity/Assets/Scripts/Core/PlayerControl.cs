@@ -314,6 +314,7 @@ namespace Core
 
         private IEnumerator PowerUpCoroutine(GameObject effectGameObject, float timer)
         {
+            effectGameObject?.SetActive(true);
             yield return new WaitForSeconds(timer);
             DeactivatePowerUps();
             effectGameObject?.SetActive(false);

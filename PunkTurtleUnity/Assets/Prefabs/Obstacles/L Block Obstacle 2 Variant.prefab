@@ -73,9 +73,21 @@ PrefabInstance:
       value: L Block Obstacle 2 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8922798442203464135, guid: e95afd69bfe0c4751ac1f2f2a0767ec9, type: 3}
+      propertyPath: m_Size.x
+      value: 8.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8922798442203464135, guid: e95afd69bfe0c4751ac1f2f2a0767ec9, type: 3}
+      propertyPath: m_Size.y
+      value: 9.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 8922798442203464135, guid: e95afd69bfe0c4751ac1f2f2a0767ec9, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 4351806017932212580, guid: c410b68394aed420ca86e6d1df52fa5d, type: 3}
+      objectReference: {fileID: 4307525586100790533, guid: c410b68394aed420ca86e6d1df52fa5d, type: 3}
+    - target: {fileID: 8922798442203464135, guid: e95afd69bfe0c4751ac1f2f2a0767ec9, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5840013609973825292, guid: e95afd69bfe0c4751ac1f2f2a0767ec9, type: 3}
     - {fileID: 7576763045240883486, guid: e95afd69bfe0c4751ac1f2f2a0767ec9, type: 3}
@@ -128,7 +140,7 @@ PolygonCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 8.12, y: 9.92}
-    newSize: {x: 2.6101928, y: 6.5299997}
+    newSize: {x: 8.12, y: 9.92}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0

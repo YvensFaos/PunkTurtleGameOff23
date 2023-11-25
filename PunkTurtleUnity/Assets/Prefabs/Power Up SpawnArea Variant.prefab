@@ -86,12 +86,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8390777241578555937, guid: ec0897a6ca7dc4af8b1d4ca4a3d41583, type: 3}
       propertyPath: spawnables.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8390777241578555937, guid: ec0897a6ca7dc4af8b1d4ca4a3d41583, type: 3}
       propertyPath: spawnables.Array.data[0]
       value: 
       objectReference: {fileID: 4791671766916609564, guid: c26e3a7a779a34471ad49cf3861ed70e, type: 3}
+    - target: {fileID: 8390777241578555937, guid: ec0897a6ca7dc4af8b1d4ca4a3d41583, type: 3}
+      propertyPath: spawnables.Array.data[1]
+      value: 
+      objectReference: {fileID: 1210641121812824217, guid: bf07cdf4c19fb4260a3739bb27f586ca, type: 3}
+    - target: {fileID: 8390777241578555937, guid: ec0897a6ca7dc4af8b1d4ca4a3d41583, type: 3}
+      propertyPath: spawnables.Array.data[2]
+      value: 
+      objectReference: {fileID: 7145254271364108912, guid: 113f673c9e033417fb81b1e090c47965, type: 3}
     - target: {fileID: 9193464405453649978, guid: ec0897a6ca7dc4af8b1d4ca4a3d41583, type: 3}
       propertyPath: m_Size.x
       value: 25.962107

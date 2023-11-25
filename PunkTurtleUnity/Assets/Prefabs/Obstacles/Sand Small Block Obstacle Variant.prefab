@@ -69,6 +69,14 @@ PrefabInstance:
       value: 0.517426
       objectReference: {fileID: 0}
     - target: {fileID: 5818982711178687618, guid: 9dbf1b6889424443f9a25213a3e85264, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 6.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 5818982711178687618, guid: 9dbf1b6889424443f9a25213a3e85264, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 5.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 5818982711178687618, guid: 9dbf1b6889424443f9a25213a3e85264, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 6.24
       objectReference: {fileID: 0}
@@ -105,9 +113,21 @@ PrefabInstance:
       value: Sand Small Block Obstacle Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8695447154584605374, guid: 9dbf1b6889424443f9a25213a3e85264, type: 3}
+      propertyPath: m_Size.x
+      value: 6.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 8695447154584605374, guid: 9dbf1b6889424443f9a25213a3e85264, type: 3}
+      propertyPath: m_Size.y
+      value: 5.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 8695447154584605374, guid: 9dbf1b6889424443f9a25213a3e85264, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -8795717216779230455, guid: c410b68394aed420ca86e6d1df52fa5d, type: 3}
+      objectReference: {fileID: 6508024865114349479, guid: c410b68394aed420ca86e6d1df52fa5d, type: 3}
+    - target: {fileID: 8695447154584605374, guid: 9dbf1b6889424443f9a25213a3e85264, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -16,6 +16,7 @@ namespace Core
         {
             if (cooldown || !collidedWith.CompareTag("Player")) return;
             if (!PlayerControl.GetSingleton().GetHit(size)) return;
+            DebugUtils.DebugLogMsg($"{name} hit the player.");
             cooldown = true;
             StartCoroutine(ObstacleCooldown());
         }

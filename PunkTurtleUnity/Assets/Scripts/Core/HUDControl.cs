@@ -92,15 +92,17 @@ namespace Core
             {
                 StopCoroutine(textDisplayCoroutine);
             }
-            
-            if (collectable is DashCollectableControl)
+
+            textDisplayCoroutine = collectable switch
             {
-                textDisplayCoroutine = StartCoroutine(DisplayForATime(dashTextObject));
-            }
-            //TODO add others
+                DashCollectableControl => StartCoroutine(DisplayForATime(dashTextObject)),
+                InvincibleCollectableControl => StartCoroutine(DisplayForATime(invincibilityTextObject)),
+                DoublePointsCollectableControl => StartCoroutine(DisplayForATime(doubleTextObject)),
+                _ => textDisplayCoroutine
+            };
         }
 
-        private IEnumerator DisplayForATime(GameObject textObject)
+        private static IEnumerator DisplayForATime(GameObject textObject)
         {
             textObject.SetActive(true);
             yield return new WaitForSeconds(3.0f);

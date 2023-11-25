@@ -76,12 +76,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 5382404939393128377, guid: c410b68394aed420ca86e6d1df52fa5d, type: 3}
+  m_Sprite: {fileID: -2418916486555093433, guid: 17d0af0527b584b438be2eb37b887604, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.4, y: 1.34}
+  m_Size: {x: 2.2, y: 0.67}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -124,7 +124,7 @@ PolygonCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 8.8, y: 2.68}
-    newSize: {x: 4.4, y: 1.34}
+    newSize: {x: 2.2, y: 0.67}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -191,3 +191,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 6620920533009391975}
   spawnCollider2D: {fileID: 7988479436372360228}
+  checkPlacement: 1

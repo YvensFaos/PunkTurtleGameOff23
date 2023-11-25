@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 37723935801262561, guid: 3fb4f6170a6904c25b609fbf5eeb631f, type: 3}
       propertyPath: m_Name
-      value: DashSpawnArea
+      value: Power Up SpawnArea
       objectReference: {fileID: 0}
     - target: {fileID: 7054372738526471956, guid: 3fb4f6170a6904c25b609fbf5eeb631f, type: 3}
       propertyPath: m_LocalPosition.x
