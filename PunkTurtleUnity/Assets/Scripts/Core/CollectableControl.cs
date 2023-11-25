@@ -29,6 +29,7 @@ namespace Core
             var finalColor = Color.white;
             finalColor.a = 0.0f;
             spriteRenderer.DOColor(finalColor, 0.22f);
+            player.EatSound();
             transform.DOMove(player.GetMouthPlacement(), 0.25f).OnComplete(() =>
             {
                 player.Collect(this);

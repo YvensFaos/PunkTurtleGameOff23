@@ -18,6 +18,7 @@ namespace Core
         [SerializeField] private SkeletonAnimation playerSkeletonAnimator;
         [SerializeField] private CinemachineImpulseSource impulseSource;
         [SerializeField] private Transform mouthPlacement;
+        [SerializeField] private PlayerAudioControl audioControl;
     
         [Header("Data")]
         [SerializeField] private float defaultSpeed;
@@ -100,6 +101,7 @@ namespace Core
             AssessUtils.CheckRequirement(ref playerRigidBody2D, this);
             AssessUtils.CheckRequirement(ref playerSkeletonAnimator, this);
             AssessUtils.CheckRequirement(ref impulseSource, this);
+            AssessUtils.CheckRequirement(ref audioControl, this);
         }
 
         private void Start()
@@ -356,6 +358,11 @@ namespace Core
         public void Collect(CollectableControl collectable)
         {
             GetCollectable?.Invoke(collectable);
+        }
+
+        public void EatSound()
+        {
+            audioControl.PlayEatSound(linearScale);
         }
 
         public void RegisterUpdateScore(UnityAction<int> updateScoreAction)
