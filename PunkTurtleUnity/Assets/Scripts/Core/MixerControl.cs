@@ -18,6 +18,7 @@ public class MixerControl : CurveHolder
     private void Start()
     {
         PlayerControl.GetSingleton().RegisterUpdateLinearValues(UpdateMixer);
+        PlayerControl.GetSingleton().RegisterGameOverEvent(OnGameOver);
         //Resets to 1.0f
 #if UNITY_WEBGL
         source.pitch = 1.0f;
@@ -29,6 +30,7 @@ public class MixerControl : CurveHolder
     private void OnDestroy()
     {
         PlayerControl.GetSingleton().UnregisterUpdateLinearValues(UpdateMixer);
+        PlayerControl.GetSingleton().UnregisterGameOverEvent(OnGameOver);
     }
 
     private void UpdateMixer(float linear)
@@ -45,6 +47,23 @@ public class MixerControl : CurveHolder
             },
             value => mixer.SetFloat("SoundtrackPitch", value),
             currentCurvePosition, timer);
+#endif
+    }
+
+    private void OnGameOver(int score, float distance)
+    {
+        var pitchDownTimer = 0.4f;
+        zoomTween?.Kill();
+#if UNITY_WEBGL
+        zoomTween = source.DOPitch(0.0f, pitchDownTimer);
+#else
+        zoomTween = DOTween.To(() =>
+            {
+                mixer.GetFloat("SoundtrackPitch", out var value);
+                return value;
+            },
+            value => mixer.SetFloat("SoundtrackPitch", value),
+            0.0f, pitchDownTimer);
 #endif
     }
 }
