@@ -25,29 +25,43 @@ namespace Core
         [SerializeField] private CurveHelper scaleCurve;
         [SerializeField] private CurveHelper speedCurve;
         [SerializeField] private float dashDefaultTimer = 10.0f;
+        [SerializeField] private float invincibleDefaultTimer = 10.0f;
+        [SerializeField] private float doubleDefaultTimer = 10.0f;
         [SerializeField] private float dashForce;
         [SerializeField] private float dashCoolDown;
         [SerializeField] private SpriteRenderer dashCoolDownImage;
+
+        [Header("References")] 
+        [SerializeField] private GameObject dashEffectGameObject;
+        [SerializeField] private GameObject invincibleEffectGameObject;
+        [SerializeField] private GameObject doublePointsEffectGameObject;
 
         [Header("Game")] 
         [SerializeField, ReadOnly] private int lives;
         [SerializeField] private int score;
         [SerializeField] private float distance;
-        [SerializeField, ReadOnly]
-        private float linearScale;
+        [SerializeField, ReadOnly] private float linearScale;
 
         //Internal Variables
         private Vector2 move = new(0,0);
         private float speedModifier = 1;
         private bool alive = true;
+        //Internal Dash Variables
         private bool dashActive;
         private float dashTimer;
         private bool dashLeft;
         private bool dashRight;
         private bool isDashOnCooldown;
+        
+        //Internal Invincible Variables
+        private bool invisible;
+        //Internal Double Variables
+        private bool doublePoints;
+        
         private float scaleStep;
         private bool scaleCooldown;
-        private Coroutine dashCoroutine;
+        
+        private Coroutine powerupCoroutine;
 
         //Actions
         private UnityAction<int> ScoreUpdateEvent;
@@ -190,6 +204,7 @@ namespace Core
 
         public bool GetHit(SizeSO hitByObjectOfSize)
         {
+            if (invisible) return true;
             if (!hitByObjectOfSize.CanDamage(linearScale)) return false;
             
             impulseSource.GenerateImpulseWithForce(2.0f);
@@ -262,22 +277,46 @@ namespace Core
         
         public void ActivateDash()
         {
-            if (dashActive)
+            ActivatePowerUp(ref dashActive, dashEffectGameObject, dashDefaultTimer);
+        }
+
+        public void ActivateInvincibility()
+        {
+            ActivatePowerUp(ref invisible, invincibleEffectGameObject, invincibleDefaultTimer);
+        }
+
+        public void ActivateDoublePoints()
+        {
+            ActivatePowerUp(ref doublePoints, doublePointsEffectGameObject, doubleDefaultTimer);
+        }
+
+        private void ActivatePowerUp(ref bool powerUp, GameObject effectGameObject, float timer)
+        {
+            if (powerUp)
             {
-                if (dashCoroutine != null)
+                if (powerupCoroutine != null)
                 {
-                    StopCoroutine(dashCoroutine);
+                    StopCoroutine(powerupCoroutine);
                 }
             }
 
-            dashActive = true;
-            dashCoroutine = StartCoroutine(DashTimerCoroutine());
+            DeactivatePowerUps();
+            powerUp = true;
+            powerupCoroutine = StartCoroutine(PowerUpCoroutine(effectGameObject, timer));
         }
 
-        private IEnumerator DashTimerCoroutine()
+        private void DeactivatePowerUps()
         {
-            yield return new WaitForSeconds(dashDefaultTimer);
             dashActive = false;
+            invisible = false;
+            doublePoints = false;
+        }
+
+        private IEnumerator PowerUpCoroutine(GameObject effectGameObject, float timer)
+        {
+            yield return new WaitForSeconds(timer);
+            DeactivatePowerUps();
+            effectGameObject?.SetActive(false);
         }
         
         public Vector3 GetMouthPlacement() => mouthPlacement.position;
