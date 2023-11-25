@@ -60,7 +60,7 @@ namespace Core
         private void UpdateScore(int score)
         {
             scoreText.text = $"Score: {score}";
-            scoreText.rectTransform.DOPunchScale(new Vector3(1.05f, 1.05f), 0.3f, 1, 0).OnComplete(() =>
+            scoreText.rectTransform.DOPunchScale(new Vector3(0.2f, 0.00f), 0.3f, 1, 0).OnComplete(() =>
             {
                 scoreText.rectTransform.localScale = Vector3.one;
             });

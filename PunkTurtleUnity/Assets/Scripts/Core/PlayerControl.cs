@@ -204,7 +204,7 @@ namespace Core
 
         public bool GetHit(SizeSO hitByObjectOfSize)
         {
-            if (invisible) return true;
+            if (invisible) return false;
             if (!hitByObjectOfSize.CanDamage(linearScale)) return false;
             
             impulseSource.GenerateImpulseWithForce(2.0f);
@@ -310,6 +310,10 @@ namespace Core
             dashActive = false;
             invisible = false;
             doublePoints = false;
+            
+            dashEffectGameObject?.SetActive(false);
+            invincibleEffectGameObject?.SetActive(false);
+            doublePointsEffectGameObject?.SetActive(false);
         }
 
         private IEnumerator PowerUpCoroutine(GameObject effectGameObject, float timer)
@@ -339,7 +343,7 @@ namespace Core
         
         public void UpdateScore(int incrementScore)
         {
-            score += incrementScore;
+            score += (doublePoints ? 2 : 1 ) * incrementScore;
             ScoreUpdateEvent?.Invoke(score);
         }
 
