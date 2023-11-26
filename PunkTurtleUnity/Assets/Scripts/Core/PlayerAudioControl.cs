@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.Serialization;
 using Utils;
 
 namespace Core
@@ -16,6 +15,8 @@ namespace Core
         [Header("Database")]
         [SerializeField]
         private List<AudioSizePair> eatSounds;
+        [SerializeField]
+        private List<AudioSizePair> transformSounds;
         [SerializeField]
         private AudioClip collectableSound;
         [SerializeField]
@@ -33,6 +34,15 @@ namespace Core
             foreach (var eatPair in eatSounds.Where(eatPair => normalizedSize <= eatPair.Two))
             {
                 source.PlayOneShot(eatPair.One);
+                break;
+            }
+        }
+        
+        public void PlayTransformSound(float normalizedSize)
+        {
+            foreach (var transformPair in transformSounds.Where(eatPair => normalizedSize <= eatPair.Two))
+            {
+                source.PlayOneShot(transformPair.One);
                 break;
             }
         }

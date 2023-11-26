@@ -139,7 +139,14 @@ MonoBehaviour:
     two: 0.5
   - one: {fileID: 8300000, guid: ea66a9df769b343e991ae33a0674c6db, type: 3}
     two: 1
-  collectableSound: {fileID: 8300000, guid: 7ced2cdf920b545259efac1687f088dc, type: 3}
+  transformSounds:
+  - one: {fileID: 8300000, guid: 5c2b9db7e05234a48b52c2e030c99d15, type: 3}
+    two: 0
+  - one: {fileID: 8300000, guid: b25ba4fdd09a64c74ba8806d5058fae5, type: 3}
+    two: 0.5
+  - one: {fileID: 8300000, guid: b2b60c2de67bc483284c870405cbf72c, type: 3}
+    two: 1
+  collectableSound: {fileID: 8300000, guid: db456c57b88b4479f91b6784f1ab504c, type: 3}
   shellSound: {fileID: 8300000, guid: db456c57b88b4479f91b6784f1ab504c, type: 3}
   hitSounds:
   - {fileID: 8300000, guid: ae3469a70d84a4448b99c891fb9da0e9, type: 3}

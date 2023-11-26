@@ -195,6 +195,7 @@ namespace Core
             scaleCooldown = true;
             var evaluatedScale = scaleCurve.Evaluate(linearScale);
             var scaleTo = new Vector3(evaluatedScale, evaluatedScale, 1.0f);
+            audioControl.PlayTransformSound(linearScale);
             transform.DOScale(scaleTo, 0.5f).OnComplete(() =>
             {
                 scaleCooldown = false;
