@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Utils;
 
 namespace Core
@@ -9,9 +10,18 @@ namespace Core
     {
         [SerializeField] 
         private AudioSource source;
+        [SerializeField] 
+        private AudioSource sourceHit;
         
+        [Header("Database")]
         [SerializeField]
         private List<AudioSizePair> eatSounds;
+        [SerializeField]
+        private AudioClip collectableSound;
+        [SerializeField]
+        private AudioClip shellSound;
+        [SerializeField]
+        private List<AudioClip> hitSounds;
 
         private void Awake()
         {
@@ -25,6 +35,22 @@ namespace Core
                 source.PlayOneShot(eatPair.One);
                 break;
             }
+        }
+
+        public void PlayCollectable()
+        {
+            source.PlayOneShot(collectableSound);
+        }
+
+        public void PlayShell()
+        {
+            source.PlayOneShot(shellSound);
+        }
+
+        public void PlayHitSound()
+        {
+            sourceHit.pitch = Random.Range(0.9f, 1.1f);
+            sourceHit.PlayOneShot(RandomHelper<AudioClip>.GetRandomFromList(hitSounds));
         }
     }
 }

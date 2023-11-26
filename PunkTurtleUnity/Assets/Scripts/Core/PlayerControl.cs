@@ -208,7 +208,7 @@ namespace Core
         {
             if (invisible) return false;
             if (!hitByObjectOfSize.CanDamage(linearScale)) return false;
-            
+            audioControl.PlayHitSound();
             impulseSource.GenerateImpulseWithForce(2.0f);
             UpdateLives(-1);
             // playerAnimator.SetTrigger(Hit);
@@ -254,7 +254,6 @@ namespace Core
                 default:playerSkeletonAnimator.skeleton.SetSkin("Turtle-Normal");
                     break;
             }
-            
             playerSkeletonAnimator.Skeleton.SetSlotsToSetupPose();
             playerSkeletonAnimator.LateUpdate();
         }
@@ -275,7 +274,6 @@ namespace Core
                 Gizmos.DrawWireSphere(mouthPlacement.position, 2.0f);
             }
         }
-
         
         public void ActivateDash()
         {
@@ -327,6 +325,8 @@ namespace Core
         }
         
         public Vector3 GetMouthPlacement() => mouthPlacement.position;
+
+        public PlayerAudioControl AudioControl() => audioControl;
 
         [Button("Initialize Curves")]
         private void InitializeCurves()

@@ -4,6 +4,7 @@ namespace Core
     {
         protected override void CollectableEffect(PlayerControl player)
         {
+            player.AudioControl().PlayCollectable();
             player.ActivateInvincibility();
         }
     }
