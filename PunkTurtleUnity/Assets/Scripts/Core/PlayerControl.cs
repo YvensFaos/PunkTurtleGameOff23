@@ -19,6 +19,7 @@ namespace Core
         [SerializeField] private CinemachineImpulseSource impulseSource;
         [SerializeField] private Transform mouthPlacement;
         [SerializeField] private PlayerAudioControl audioControl;
+        [SerializeField] private SpriteRenderer auraSprite;
     
         [Header("Data")]
         [SerializeField] private float defaultSpeed;
@@ -302,8 +303,16 @@ namespace Core
             }
 
             DeactivatePowerUps();
+            PowerUpAura();
             powerUp = true;
             powerupCoroutine = StartCoroutine(PowerUpCoroutine(effectGameObject, timer));
+        }
+
+        private void PowerUpAura()
+        {
+            auraSprite.gameObject.SetActive(true);
+            auraSprite.DOColor(Color.white, 0.1f);
+            PowerUpCinematicControl.GetSingleton().ActivatePowerUpCinematic();
         }
 
         private void DeactivatePowerUps()
@@ -311,6 +320,8 @@ namespace Core
             dashActive = false;
             invisible = false;
             doublePoints = false;
+            
+            auraSprite.gameObject.SetActive(false);
             
             dashEffectGameObject?.SetActive(false);
             invincibleEffectGameObject?.SetActive(false);
@@ -324,10 +335,6 @@ namespace Core
             DeactivatePowerUps();
             effectGameObject?.SetActive(false);
         }
-        
-        public Vector3 GetMouthPlacement() => mouthPlacement.position;
-
-        public PlayerAudioControl AudioControl() => audioControl;
 
         [Button("Initialize Curves")]
         private void InitializeCurves()
@@ -335,8 +342,6 @@ namespace Core
             scaleCurve.InitializeCurveHelper();
             speedCurve.InitializeCurveHelper();
         }
-        
-        #region Unity Actions Related
 
         public void UpdateLives(int incrementLife)
         {
@@ -365,7 +370,8 @@ namespace Core
         {
             audioControl.PlayEatSound(linearScale);
         }
-
+        
+        #region Unity Actions Related
         public void RegisterUpdateScore(UnityAction<int> updateScoreAction)
         {
             ScoreUpdateEvent += updateScoreAction;
@@ -426,5 +432,9 @@ namespace Core
             GetCollectable -= getCollectableEvent;
         }
         #endregion
+                
+        public Vector3 GetMouthPlacement() => mouthPlacement.position;
+
+        public PlayerAudioControl AudioControl() => audioControl;
     }
 }
