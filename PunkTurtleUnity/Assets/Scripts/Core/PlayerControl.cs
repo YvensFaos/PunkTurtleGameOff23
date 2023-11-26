@@ -226,12 +226,14 @@ namespace Core
             dashLeft = false;
             dashRight = false;
             isDashOnCooldown = true;
+            dashCoolDownImage.gameObject.SetActive(true);
             dashCoolDownImage.color = Color.black;
             var tween = dashCoolDownImage.DOColor(Color.white, dashCoolDown);
             yield return new WaitForSeconds(dashCoolDown);
             isDashOnCooldown = false;
             tween.Kill();
             dashCoolDownImage.color = Color.white;
+            dashCoolDownImage.gameObject.SetActive(false);
         }
 
         private void GameOver()
