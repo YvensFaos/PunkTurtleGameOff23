@@ -86,8 +86,14 @@ AudioMixerController:
   m_EnableSuspend: 1
   m_UpdateMode: 0
   m_ExposedParameters:
+  - guid: 6843b3b06eee440ac81758942f8ef2f5
+    name: MainVolume
+  - guid: 5653289da802d4f9681b28e3c8bf3900
+    name: SFXVolume
   - guid: 0d559508c8019419e9207f207519e1ae
     name: SoundtrackPitch
+  - guid: 353013b637e524491a7d424cbfdfd588
+    name: OSTVolume
   m_AudioMixerGroupViews:
   - guids:
     - 69eb250c0bc2441f28381cf127ab5ac1
