@@ -21,8 +21,10 @@ namespace Core
         private GameObject dashTextObject;
         [SerializeField] 
         private GameObject invincibilityTextObject;
-        [SerializeField] 
+        [SerializeField]
         private GameObject doubleTextObject;
+        [SerializeField] 
+        private GameObject newRankingObject;
 
         private Coroutine textDisplayCoroutine;
 
@@ -80,7 +82,10 @@ namespace Core
         private void GameOver(int score, float distance)
         {
             gameOverPanel.gameObject.SetActive(true);
-            gameOverPanel.GameOver(score, distance);   
+            gameOverPanel.GameOver(score, distance);
+
+            var newRanking = GameManager.GetSingleton().NewScore(score, distance);
+            newRankingObject.SetActive(newRanking);
         }
 
         private void GetCollectable(CollectableControl collectable)
