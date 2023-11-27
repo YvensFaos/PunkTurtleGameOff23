@@ -5903,6 +5903,7 @@ MonoBehaviour:
   mouthPlacement: {fileID: 1284804603894724305}
   audioControl: {fileID: 7982342146775546442}
   auraSprite: {fileID: 5432382217430881205}
+  meshRenderer: {fileID: 3322147077447389534}
   defaultSpeed: 10
   scaleFactor: 2
   scaleCurve:
@@ -5996,6 +5997,8 @@ MonoBehaviour:
   dashEffectGameObject: {fileID: 4284082551986470592}
   invincibleEffectGameObject: {fileID: 865666704708026171}
   doublePointsEffectGameObject: {fileID: 2148706681056527640}
+  toonMaterial: {fileID: 2100000, guid: 2d605c1cb1e2b4778a8119b3f6e841fe, type: 2}
+  outlineToonMaterial: {fileID: 2100000, guid: a19db14af1ed64d77a3b6c2b1a1f7a77, type: 2}
   lives: 0
   score: 0
   distance: 0

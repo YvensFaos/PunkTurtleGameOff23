@@ -37,6 +37,8 @@ namespace Core
         [SerializeField] private GameObject dashEffectGameObject;
         [SerializeField] private GameObject invincibleEffectGameObject;
         [SerializeField] private GameObject doublePointsEffectGameObject;
+        [SerializeField] private Material toonMaterial;
+        [SerializeField] private Material outlineToonMaterial;
 
         [Header("Game")] 
         [SerializeField, ReadOnly] private int lives;
@@ -44,10 +46,13 @@ namespace Core
         [SerializeField] private float distance;
         [SerializeField, ReadOnly] private float linearScale;
 
+        private Color skeletonColor;
+        
         //Internal Variables
         private Vector2 move = new(0,0);
         private float speedModifier = 1;
         private bool alive = true;
+        
         //Internal Dash Variables
         private bool dashActive;
         private float dashTimer;
@@ -118,6 +123,10 @@ namespace Core
             UpdateDistance(0.0f);
             InitializeCurves();
             UpdateLinearValue();
+
+            var skeleton = playerSkeletonAnimator.skeleton;
+            skeletonColor = new Color(skeleton.R, skeleton.G,
+                skeleton.B, skeleton.A);
         }
 
         private void Update()
@@ -197,10 +206,23 @@ namespace Core
             var evaluatedScale = scaleCurve.Evaluate(linearScale);
             var scaleTo = new Vector3(evaluatedScale, evaluatedScale, 1.0f);
             audioControl.PlayTransformSound(linearScale);
+
+            DOTween.To(() => playerSkeletonAnimator.skeleton.R, value =>
+                {
+                    playerSkeletonAnimator.skeleton.R = value;
+                    playerSkeletonAnimator.skeleton.G = value;
+                    playerSkeletonAnimator.skeleton.B = value;
+                },
+                0.0f, 0.5f);
+            playerSkeletonAnimator.skeleton.A = 1.0f;
             transform.DOScale(scaleTo, 0.5f).OnComplete(() =>
             {
                 scaleCooldown = false;
                 transform.localScale = scaleTo;
+                playerSkeletonAnimator.skeleton.R = skeletonColor.r;
+                playerSkeletonAnimator.skeleton.G = skeletonColor.g;
+                playerSkeletonAnimator.skeleton.B = skeletonColor.b;
+                playerSkeletonAnimator.skeleton.A = skeletonColor.a;
                 UpdateLinearValue();
                 UpdateLinearSpeedModifier();
             });
@@ -282,16 +304,31 @@ namespace Core
         public void ActivateDash()
         {
             ActivatePowerUp(ref dashActive, dashEffectGameObject, dashDefaultTimer);
+            playerSkeletonAnimator.skeleton.R = 0.4f;
+            playerSkeletonAnimator.skeleton.G = 1.0f;
+            playerSkeletonAnimator.skeleton.B = 0.4f;
+            playerSkeletonAnimator.skeleton.A = 1.0f;
         }
 
         public void ActivateInvincibility()
         {
             ActivatePowerUp(ref invisible, invincibleEffectGameObject, invincibleDefaultTimer);
+            playerSkeletonAnimator.skeleton.R = 1.0f;
+            playerSkeletonAnimator.skeleton.G = 0.4f;
+            playerSkeletonAnimator.skeleton.B = 0.4f;
+            playerSkeletonAnimator.skeleton.A = 0.3f;
+            
+            var originalMaterial = playerSkeletonAnimator.SkeletonDataAsset.atlasAssets[0].PrimaryMaterial;
+            playerSkeletonAnimator.CustomMaterialOverride[originalMaterial] = outlineToonMaterial;
         }
 
         public void ActivateDoublePoints()
         {
             ActivatePowerUp(ref doublePoints, doublePointsEffectGameObject, doubleDefaultTimer);
+            playerSkeletonAnimator.skeleton.R = 0.4f;
+            playerSkeletonAnimator.skeleton.G = 0.4f;
+            playerSkeletonAnimator.skeleton.B = 1.0f;
+            playerSkeletonAnimator.skeleton.A = 1.0f;
         }
 
         private void ActivatePowerUp(ref bool powerUp, GameObject effectGameObject, float timer)
@@ -322,6 +359,14 @@ namespace Core
             dashActive = false;
             invisible = false;
             doublePoints = false;
+
+            playerSkeletonAnimator.skeleton.R = skeletonColor.r;
+            playerSkeletonAnimator.skeleton.G = skeletonColor.g;
+            playerSkeletonAnimator.skeleton.B = skeletonColor.b;
+            playerSkeletonAnimator.skeleton.A = skeletonColor.a;
+            
+            var originalMaterial = playerSkeletonAnimator.SkeletonDataAsset.atlasAssets[0].PrimaryMaterial;
+            playerSkeletonAnimator.CustomMaterialOverride[originalMaterial] = toonMaterial;
             
             auraSprite.gameObject.SetActive(false);
             
