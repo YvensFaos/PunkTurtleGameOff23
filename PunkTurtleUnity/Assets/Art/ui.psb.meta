@@ -197,7 +197,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 853, y: 305}
+    uvTransform: {x: 853, y: 306}
     spritePosition: {x: 275, y: 20}
   - name: Layer 1
     originalName: 
@@ -239,7 +239,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 836, y: 2}
+    uvTransform: {x: 836, y: 3}
     spritePosition: {x: 16, y: 20}
   - name: Layer 1
     originalName: 
@@ -323,7 +323,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 2, y: 306}
+    uvTransform: {x: 3, y: 306}
     spritePosition: {x: 17, y: 151}
   characterData:
     bones: []
