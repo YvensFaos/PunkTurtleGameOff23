@@ -67,6 +67,9 @@ MonoBehaviour:
   hitSounds:
   - {fileID: 8300000, guid: ae3469a70d84a4448b99c891fb9da0e9, type: 3}
   - {fileID: 8300000, guid: ca22ba4c4fa994774a40171c8b7e20de, type: 3}
+  - {fileID: 8300000, guid: 8ad9b2fbd05bf44bc9945e6e5992f273, type: 3}
+  - {fileID: 8300000, guid: 36855a81fed8a496fb4640791df37d13, type: 3}
+  - {fileID: 8300000, guid: eaf3476debc424bea8abf9dc45260582, type: 3}
 --- !u!82 &5793047756981818809
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5903,7 +5906,6 @@ MonoBehaviour:
   mouthPlacement: {fileID: 1284804603894724305}
   audioControl: {fileID: 7982342146775546442}
   auraSprite: {fileID: 5432382217430881205}
-  meshRenderer: {fileID: 3322147077447389534}
   defaultSpeed: 10
   scaleFactor: 2
   scaleCurve:

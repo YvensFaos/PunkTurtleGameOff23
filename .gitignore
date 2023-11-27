@@ -78,3 +78,4 @@ crashlytics-build.properties
 *.nosync
 **/Autosave/
 **/Project File Backups/
+PunkTurtleUnity/Assets/google-services.json

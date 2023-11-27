@@ -6,6 +6,11 @@ namespace Core
 {
     public class GameManager: Singleton<GameManager>
     {
+        [SerializeField, ReadOnly]
+        private int maxScore;
+        [SerializeField, ReadOnly]
+        private float maxDistance;
+        
         private void Awake()
         {
             ControlSingleton();
@@ -16,12 +21,7 @@ namespace Core
             maxScore = PlayerPrefs.GetInt("MaxScore");
             maxDistance = PlayerPrefs.GetFloat("MaxDistance");
         }
-
-        [SerializeField, ReadOnly]
-        private int maxScore;
-        [SerializeField, ReadOnly]
-        private float maxDistance;
-
+        
         public bool NewScore(int score, float distance)
         {
             if (score < MaxScore && distance < maxDistance) return false;
@@ -30,6 +30,7 @@ namespace Core
             maxDistance = distance;
             PlayerPrefs.SetInt("MaxScore", score);
             PlayerPrefs.SetFloat("MaxDistance", distance);
+
             return true;
         }
 
