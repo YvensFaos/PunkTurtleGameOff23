@@ -253,7 +253,7 @@ namespace Core
             {
                 case <= 0.4f: playerSkeletonAnimator.skeleton.SetSkin("Turtle-Small");
                     break;
-                case >= 0.6f: playerSkeletonAnimator.skeleton.SetSkin("Turtle-Normal");
+                case >= 0.6f: playerSkeletonAnimator.skeleton.SetSkin("Turtle-Big");
                     break;
                 default:playerSkeletonAnimator.skeleton.SetSkin("Turtle-Normal");
                     break;

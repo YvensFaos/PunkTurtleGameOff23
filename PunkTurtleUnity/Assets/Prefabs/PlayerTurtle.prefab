@@ -322,7 +322,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 998e63dc7c28f4c5e811b7f533a31f03, type: 2}
+  - {fileID: 2100000, guid: 2d605c1cb1e2b4778a8119b3f6e841fe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -356,7 +356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: c368fc8e74a074e2bb740e0bd78425a0, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: 439f624795fa046479beaefca0b51380, type: 2}
   initialSkinName: Turtle-Normal
   fixPrefabOverrideViaMeshFilter: 2
   initialFlipX: 0
