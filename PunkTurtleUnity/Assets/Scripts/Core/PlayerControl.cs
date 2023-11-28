@@ -300,6 +300,11 @@ namespace Core
                 Gizmos.DrawWireSphere(mouthPlacement.position, 2.0f);
             }
         }
+
+        public void GetShell()
+        {
+            UpdateLives(1);
+        }
         
         public void ActivateDash()
         {
