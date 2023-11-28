@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Turtle_Material
+  m_Name: White Turtle Material
   m_Shader: {fileID: -6465566751694194690, guid: e6e4124d7aad84204994dfa914156a74, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -67,7 +67,7 @@ Material:
     - _ThresholdEnd: 0.25
     - _Use8Neighbourhood: 1
     m_Colors:
-    - _AddColor: {r: 0, g: 0, b: 0, a: 1}
+    - _AddColor: {r: 1, g: 1, b: 1, a: 1}
     - _MultiplyColor: {r: 1, g: 1, b: 1, a: 0}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
