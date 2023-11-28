@@ -15,6 +15,7 @@ namespace Utils
             {
                 //Destroy the other singleton
                 Destroy(gameObject);
+                return;
             }
             //Set the singleton to be this object
             singleton = GetComponent<T>();

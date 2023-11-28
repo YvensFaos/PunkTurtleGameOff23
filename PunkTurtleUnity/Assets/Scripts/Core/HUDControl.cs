@@ -84,8 +84,9 @@ namespace Core
             gameOverPanel.gameObject.SetActive(true);
             gameOverPanel.GameOver(score, distance);
 
-            var newRanking = GameManager.GetSingleton().NewScore(score, distance);
-            newRankingObject.SetActive(newRanking);
+            var newHighScore = GameManager.GetSingleton().NewScore(score, distance);
+            DebugUtils.DebugLogMsg($"New High Score! {newHighScore}");
+            newRankingObject.SetActive(newHighScore);
         }
 
         private void GetCollectable(CollectableControl collectable)

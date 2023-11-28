@@ -34,6 +34,15 @@ namespace Core
             return true;
         }
 
+        [Button("Reset Score")]
+        public void ResetScore()
+        {
+            maxScore = 0;
+            maxDistance = 0.0f;
+            PlayerPrefs.SetInt("MaxScore", maxScore);
+            PlayerPrefs.SetFloat("MaxDistance", maxDistance);
+        }
+
         public int MaxScore => maxScore;
         public float MaxDistance => maxDistance;
     }
