@@ -91,6 +91,25 @@ namespace Core
 
         private void GetCollectable(CollectableControl collectable)
         {
+            switch (collectable)
+            {
+                case DashCollectableControl:
+                    StopCurrentPowerUp();
+                    textDisplayCoroutine = StartCoroutine(DisplayForATime(dashTextObject));
+                    break;
+                case InvincibleCollectableControl:
+                    StopCurrentPowerUp();
+                    textDisplayCoroutine = StartCoroutine(DisplayForATime(invincibilityTextObject));
+                    break;
+                case DoublePointsCollectableControl:
+                    StopCurrentPowerUp();
+                    textDisplayCoroutine = StartCoroutine(DisplayForATime(doubleTextObject));
+                    break;
+            }
+        }
+
+        private void StopCurrentPowerUp()
+        {
             dashTextObject.SetActive(false);
             invincibilityTextObject.SetActive(false);
             doubleTextObject.SetActive(false);
@@ -99,14 +118,6 @@ namespace Core
             {
                 StopCoroutine(textDisplayCoroutine);
             }
-
-            textDisplayCoroutine = collectable switch
-            {
-                DashCollectableControl => StartCoroutine(DisplayForATime(dashTextObject)),
-                InvincibleCollectableControl => StartCoroutine(DisplayForATime(invincibilityTextObject)),
-                DoublePointsCollectableControl => StartCoroutine(DisplayForATime(doubleTextObject)),
-                _ => textDisplayCoroutine
-            };
         }
 
         private static IEnumerator DisplayForATime(GameObject textObject)

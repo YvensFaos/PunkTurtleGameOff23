@@ -59,7 +59,7 @@ public class LivesPanelControl : MonoBehaviour
         removeLive.rectTransform.DOScale(new Vector3(0, 0, 0), 0.3f);
         removeLive.DOFillAmount(0.0f, 0.3f).OnComplete(() =>
         {
-            Destroy(removeLive);
+            Destroy(removeLive.gameObject);
             //LeanPool.Despawn(removeLive);
         });
     }
