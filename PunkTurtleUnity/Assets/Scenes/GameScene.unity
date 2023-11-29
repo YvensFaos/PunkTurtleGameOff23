@@ -1898,57 +1898,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1255292887944996902, guid: 43501c6a86b6a4276a5ac835204c837f, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1255292887944996902, guid: 43501c6a86b6a4276a5ac835204c837f, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1255292887944996902, guid: 43501c6a86b6a4276a5ac835204c837f, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1255292887944996902, guid: 43501c6a86b6a4276a5ac835204c837f, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1343532652264267543, guid: 43501c6a86b6a4276a5ac835204c837f, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3250147733721180283, guid: 43501c6a86b6a4276a5ac835204c837f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4139828662749906710, guid: 43501c6a86b6a4276a5ac835204c837f, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4870475364368684720, guid: 43501c6a86b6a4276a5ac835204c837f, type: 3}
       propertyPath: m_Name
       value: HUD
-      objectReference: {fileID: 0}
-    - target: {fileID: 5755971698759499342, guid: 43501c6a86b6a4276a5ac835204c837f, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5755971698759499342, guid: 43501c6a86b6a4276a5ac835204c837f, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5755971698759499342, guid: 43501c6a86b6a4276a5ac835204c837f, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5755971698759499342, guid: 43501c6a86b6a4276a5ac835204c837f, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6870062271088463908, guid: 43501c6a86b6a4276a5ac835204c837f, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6944943146213989726, guid: 43501c6a86b6a4276a5ac835204c837f, type: 3}
       propertyPath: m_Pivot.x
@@ -1957,10 +1909,6 @@ PrefabInstance:
     - target: {fileID: 6944943146213989726, guid: 43501c6a86b6a4276a5ac835204c837f, type: 3}
       propertyPath: m_Pivot.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6944943146213989726, guid: 43501c6a86b6a4276a5ac835204c837f, type: 3}
-      propertyPath: m_RootOrder
-      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6944943146213989726, guid: 43501c6a86b6a4276a5ac835204c837f, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2032,22 +1980,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6944943146213989726, guid: 43501c6a86b6a4276a5ac835204c837f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7821078798930878939, guid: 43501c6a86b6a4276a5ac835204c837f, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7821078798930878939, guid: 43501c6a86b6a4276a5ac835204c837f, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7821078798930878939, guid: 43501c6a86b6a4276a5ac835204c837f, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7821078798930878939, guid: 43501c6a86b6a4276a5ac835204c837f, type: 3}
-      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
