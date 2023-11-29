@@ -27,6 +27,7 @@ namespace Core
         private GameObject newRankingObject;
 
         private Coroutine textDisplayCoroutine;
+        private Tweener imageTween;
 
         private void Awake()
         {
@@ -120,11 +121,14 @@ namespace Core
             }
         }
 
-        private static IEnumerator DisplayForATime(GameObject textObject)
+        private IEnumerator DisplayForATime(GameObject textObject)
         {
+            var image = textObject.GetComponent<Image>();
+            image.color = Color.white;
+            imageTween?.Kill();
             textObject.SetActive(true);
             yield return new WaitForSeconds(1.5f);
-            textObject.GetComponent<Image>().DOColor(new Color(1.0f, 1.0f, 1.0f, 0.0f), 1.0f);
+            imageTween = image.DOColor(new Color(1.0f, 1.0f, 1.0f, 0.0f), 1.0f);
             yield return new WaitForSeconds(1.0f);
             textObject.SetActive(false);
         }
