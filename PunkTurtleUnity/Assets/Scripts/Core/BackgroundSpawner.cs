@@ -61,7 +61,6 @@ namespace Core
             var randomChance = RandomChanceUtils.GetRandom(sum);
             var index = 0;
             var found = false;
-            var cummulativeChange = 0;
             var prefab = backgroundPrefabs[index].One;
             do
             {

@@ -5994,8 +5994,9 @@ MonoBehaviour:
   invincibleDefaultTimer: 8
   doubleDefaultTimer: 15
   dashForce: 400
-  dashCoolDown: 4
+  dashCoolDown: 1
   dashCoolDownImage: {fileID: 4058303776711323706}
+  iframesTime: 0.5
   dashEffectGameObject: {fileID: 4284082551986470592}
   invincibleEffectGameObject: {fileID: 865666704708026171}
   doublePointsEffectGameObject: {fileID: 2148706681056527640}

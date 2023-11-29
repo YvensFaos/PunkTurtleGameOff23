@@ -32,6 +32,7 @@ namespace Core
         [SerializeField] private float dashForce;
         [SerializeField] private float dashCoolDown;
         [SerializeField] private SpriteRenderer dashCoolDownImage;
+        [SerializeField] private float iframesTime = 0.5f; 
 
         [Header("References")] 
         [SerializeField] private GameObject dashEffectGameObject;
@@ -64,11 +65,14 @@ namespace Core
         private bool invisible;
         //Internal Double Variables
         private bool doublePoints;
+
+        private bool iframesOn;
         
         private float scaleStep;
         private bool scaleCooldown;
         
         private Coroutine powerupCoroutine;
+        private Coroutine iframesCoroutine;
 
         //Actions
         private UnityAction<int> ScoreUpdateEvent;
@@ -231,16 +235,30 @@ namespace Core
         public bool GetHit(SizeSO hitByObjectOfSize)
         {
             if (invisible) return false;
+            if (iframesOn) return false;
             if (!hitByObjectOfSize.CanDamage(linearScale)) return false;
+
+            iframesOn = true;
+            if (iframesCoroutine != null)
+            {
+                StopCoroutine(iframesCoroutine);    
+            }
+            iframesCoroutine = StartCoroutine(IFramesCouroutine());
+            
             audioControl.PlayHitSound();
             impulseSource.GenerateImpulseWithForce(2.0f);
             UpdateLives(-1);
-            // playerAnimator.SetTrigger(Hit);
 
             if (lives > 0) return true;
             //Game Over
             GameOver();
             return true;
+        }
+
+        private IEnumerator IFramesCouroutine()
+        {
+            yield return new WaitForSeconds(iframesTime);
+            iframesOn = false;
         }
 
         private IEnumerator DashCooldownCoroutine()
