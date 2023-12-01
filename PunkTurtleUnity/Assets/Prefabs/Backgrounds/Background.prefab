@@ -114,9 +114,11 @@ MonoBehaviour:
   - one: {fileID: 6425114367290247758, guid: 5a2daf6e98d85483aa7d44811643f8b2, type: 3}
     two: 30
   - one: {fileID: 2399610159918396608}
-    two: 40
+    two: 35
   - one: {fileID: 912734349350264432, guid: fb06af36d646b4990a6c76cdb83483a5, type: 3}
     two: 30
+  - one: {fileID: 8320978943467742934, guid: de582cf0120384b2c8090e0a418c0010, type: 3}
+    two: 5
   spawners:
   - {fileID: 8092977618205566467}
   - {fileID: 3776243566421160860}
