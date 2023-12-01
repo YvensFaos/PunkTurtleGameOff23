@@ -319,10 +319,12 @@ MonoBehaviour:
     sound from www.youtube.com/watch?v=YTC75cKzuNk\n\n<b>Extras</b>\n(Unity) Better
     Minimal WebGL Template by https://seansleblanc.itch.io\n\n<b>Fonts from DaFont.com</b>\nCaviar
     Dreams by Lauren Thompson \nEdo SZ by Vic Fieger\nMB Forever Raw by Irina ModBlackmoon\nStampede
-    by Manfred Klein\n\n<b>Extra Icons from Flaticon</b>\nVolume icons created by
-    nawicon\nSlider navigation icons created by Pixel perfect\n\n<b>Thanks to</b>\nJuliana
-    Santos de Carvalho & Morgana do Bujari\nIain Douglas, Ruben \"Synnys\" Huzelbosch,
-    \nRare\u015F Petrache, Alejandro Moreno"
+    by Manfred Klein\nMarvin Round from XFonts\n\n<b>Extra Icons from Flaticon</b>\nVolume
+    icons created by nawicon\nSlider navigation icons created by Pixel perfect\n
+    \n<b>Thanks to</b>\nJuliana Santos de Carvalho & Morgana do Bujari\nIain Douglas,
+    Ruben \"Synnys\" Huzelbosch, \nRare\u015F Petrache, Alejandro Moreno, Daniel
+    Valente,\nBram den Hond, Hans Wichman, Dudu Corv\xE3o,\nVictor \"Banana\" da
+    Souza Rocha, David \"Daves\" Costa Araujo, Mark Schipper"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2094ca464e86047e580b570676cdab0e, type: 2}
   m_sharedMaterial: {fileID: 8654298450516622, guid: 2094ca464e86047e580b570676cdab0e, type: 2}
@@ -2340,7 +2342,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: A game by Yvens R. Serpa and Marcelo Bastos
+  m_text: "A game by \n<b>Yvens R. Serpa & Marcelo Bastos</b>"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2094ca464e86047e580b570676cdab0e, type: 2}
   m_sharedMaterial: {fileID: 8654298450516622, guid: 2094ca464e86047e580b570676cdab0e, type: 2}
@@ -2367,8 +2369,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 42
+  m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

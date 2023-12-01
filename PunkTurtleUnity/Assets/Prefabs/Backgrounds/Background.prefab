@@ -114,7 +114,7 @@ MonoBehaviour:
     two: 30
   - one: {fileID: 2399610159918396608}
     two: 40
-  - one: {fileID: 4353438024964415226, guid: b653c2d179f514062ade17773a4a8e90, type: 3}
+  - one: {fileID: 912734349350264432, guid: fb06af36d646b4990a6c76cdb83483a5, type: 3}
     two: 30
   spawners:
   - {fileID: 8092977618205566467}
