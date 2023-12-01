@@ -13,6 +13,8 @@ namespace Core
         private Vector2 movementDirection;
         [SerializeField] 
         private float movementSpeed;
+        [SerializeField] 
+        private float extraRandomSpeed;
         [SerializeField]
         private bool randomDirection;
         [SerializeField, ShowIf("randomDirection")] 
@@ -31,11 +33,14 @@ namespace Core
         private Tweener scalingTweener;
         private bool randomMoving;
         private bool shouldDie;
+        private float speed;
+        
         protected void OnEnable()
         {
             shouldDie = false;
             randomMoving = false;
-            
+
+            speed = movementSpeed + Random.Range(-extraRandomSpeed, extraRandomSpeed);
             scalingTweener?.Kill();
             scalingTweener = transform.DOShakeScale(0.2f, 0.03f).SetLoops(-1);
             
@@ -55,7 +60,7 @@ namespace Core
         {
             if (randomDirection) return;
             transform.Translate(
-                movementDirection * (movementSpeed * Time.deltaTime));
+                movementDirection * (speed * Time.deltaTime));
             CheckKillDistance();
         }
 
