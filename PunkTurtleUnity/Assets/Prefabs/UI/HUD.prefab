@@ -2210,7 +2210,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Double Click To Dash!
+  m_text: Double Press To Dash!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e9159e8d5a1e406194a6223a853c1d8, type: 2}
   m_sharedMaterial: {fileID: 5013737174718673327, guid: 2e9159e8d5a1e406194a6223a853c1d8, type: 2}
